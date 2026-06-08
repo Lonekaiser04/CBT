@@ -7,12 +7,9 @@ const EXAM_CONFIG = {
   day:    8,   // Exam day; 
 
   // Start time in IST (24-hour format)
-  startHour:   10,  // 10 = 10:00 AM
-  startMinute: 10,
+  startHour:   11,  // 10 = 10:00 AM
+  startMinute: 0,
 
-  // How long the exam window stays open (minutes)
-  // Candidates must START within this window; once started their
-  // personal timer runs for EXAM_DURATION_MINUTES regardless.
   windowMinutes: 90,   // 90-min window to log in & start
 
   // Exam duration per candidate (minutes)
@@ -28,7 +25,7 @@ const EXAM_CONFIG = {
 
 /* End of config ─────────────────────────────────── */
 
-const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxlbDB2sZEJDPPj-vkSZf46MgMj5HHfpnKobtATwgGoXL328DT7HKZ-g-aa8HZwrk0i/exec";
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwMMQ5itwiBhF5dCNdtBpTtOzBeJ-B0kVBXswtRkgVIC0bECM7S4x4SC8-DNgfHnvRW/exec";
 
 /* ─── Derived schedule values (do not edit) ─────── */
 function getExamWindowUTC() {

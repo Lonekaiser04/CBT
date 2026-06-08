@@ -615,10 +615,10 @@ const RESULTS_CONFIG = {
   releaseYear:   2026,
   releaseMonth:  5,      // 5 = June (0-based)
   releaseDay:    8,     // Day after exam
-  releaseHour:   10,     // 6:00 PM IST
-  releaseMinute: 25,
+  releaseHour:   11,     // 6:00 PM IST
+  releaseMinute: 5,
   tzOffsetMinutes: 330,  // IST = UTC+5:30
-  appsScriptUrl: "https://script.google.com/macros/s/AKfycbxlbDB2sZEJDPPj-vkSZf46MgMj5HHfpnKobtATwgGoXL328DT7HKZ-g-aa8HZwrk0i/exec",
+  appsScriptUrl: "https://script.google.com/macros/s/AKfycbwMMQ5itwiBhF5dCNdtBpTtOzBeJ-B0kVBXswtRkgVIC0bECM7S4x4SC8-DNgfHnvRW/exec",
 };
 
 /* ╔═══════════════════════════════════════════╗
@@ -946,23 +946,37 @@ function checkScore() {
 
   const url = RESULTS_CONFIG.appsScriptUrl;
   if (url && url !== "YOUR_GOOGLE_APPS_SCRIPT_URL_HERE") {
-    // Fetch from Google Sheets via Apps Script
-    const fetchUrl = url + "?action=getResult&roll=" + encodeURIComponent(roll);
-    fetch(fetchUrl)
-      .then(r => r.json())
-      .then(data => {
-        if (data.status === "found") {
-          displayScore(data.answers, data.candidateName || name || roll, data.rollNumber || roll);
-        } else {
-          showScoreError("Roll number not found. Please ensure your exam was submitted successfully.");
-        }
-      })
-      .catch(() => {
-        showScoreError("Could not connect to the server. Please try again or contact the coordinator.");
-      });
+    // ✅ JSONP fetch — bypasses CORS restriction on Google Apps Script
+    const cbName = "_cbt_cb_" + Date.now();
+    const script = document.createElement("script");
+    const timeout = setTimeout(() => {
+      delete window[cbName];
+      script.remove();
+      showScoreError("Could not connect to the server. Please try again or contact the coordinator.");
+    }, 10000);
+
+    window[cbName] = function(data) {
+      clearTimeout(timeout);
+      delete window[cbName];
+      script.remove();
+      if (data.status === "found") {
+        displayScore(data.answers, data.candidateName || name || roll, data.rollNumber || roll);
+      } else if (data.status === "notfound") {
+        showScoreError("Roll number not found. Please ensure your exam was submitted successfully.");
+      } else {
+        showScoreError("Server error. Please contact the coordinator.");
+      }
+    };
+
+    script.src = url + "?action=getResult&roll=" + encodeURIComponent(roll) + "&callback=" + cbName;
+    script.onerror = function() {
+      clearTimeout(timeout);
+      delete window[cbName];
+      showScoreError("Could not connect to the server. Please try again or contact the coordinator.");
+    };
+    document.head.appendChild(script);
+
   } else {
-    // ── DEMO MODE: no Apps Script connected ──
-    // Shows how the score panel looks; replace with real data
     showScoreError(
       "Score lookup requires the Google Apps Script backend to be configured. " +
       "If you are the admin, set appsScriptUrl in RESULTS_CONFIG. " +
