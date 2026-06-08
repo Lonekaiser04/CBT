@@ -4,11 +4,11 @@ const EXAM_CONFIG = {
   // Date: YYYY, MM (0-based: Jan=0 … Dec=11), DD
   year:   2026,
   month:  5,       // 5 = June (0-based)
-  day:    8,   // Exam day; 
+  day:    10,   // Exam day; 
 
   // Start time in IST (24-hour format)
-  startHour:   11,  // 10 = 10:00 AM
-  startMinute: 11,
+  startHour:   10,  // 10 = 10:00 AM
+  startMinute: 10,
 
   windowMinutes: 90,   // 90-min window to log in & start
 
@@ -25,7 +25,7 @@ const EXAM_CONFIG = {
 
 /* End of config ─────────────────────────────────── */
 
-const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxuQ-mS2SgxQfELt0u8L0ZKXtfi7U2-qaGkubTndEnJIyQvhqPIsTtOxRIyj1VSbOrc/exec";
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxCEgv8n1LyPhk5Am1qZ8yF6kvYOeQgG1aTOLCA1XrD1sY1DzsEVj-J6FS65lMe4zhM/exec";
 
 /* ─── Derived schedule values (do not edit) ─────── */
 function getExamWindowUTC() {

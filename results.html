@@ -616,9 +616,9 @@ const RESULTS_CONFIG = {
   releaseMonth:  5,      // 5 = June (0-based)
   releaseDay:    8,     // Day after exam
   releaseHour:   11,     // 6:00 PM IST
-  releaseMinute: 12,
+  releaseMinute: 0,
   tzOffsetMinutes: 330,  // IST = UTC+5:30
-  appsScriptUrl: "https://script.google.com/macros/s/AKfycbxuQ-mS2SgxQfELt0u8L0ZKXtfi7U2-qaGkubTndEnJIyQvhqPIsTtOxRIyj1VSbOrc/exec",
+  appsScriptUrl: "https://script.google.com/macros/s/AKfycbx-6byRDwtkQ2lj7U_JQzfak_Q_RIGqfRRupC2VN_CxDvfE1ASF0mFJ5o0Ksp2ICgeS/exec",
 };
 
 /* ╔═══════════════════════════════════════════╗
@@ -727,6 +727,8 @@ const SECTIONS = [
 ];
 
 /* ═══ RELEASE GATE ═══ */
+let userAnswers = null; // declared here so buildDetailedAK can safely reference it
+let activeFilter = "all";
 function getReleaseMs() {
   return Date.UTC(
     RESULTS_CONFIG.releaseYear, RESULTS_CONFIG.releaseMonth,
@@ -767,8 +769,6 @@ function showLockedCountdown(releaseMs) {
 }
 
 /* ═══ BUILD PAGE ═══ */
-let userAnswers = null; // filled when candidate checks score
-let activeFilter = "all";
 
 function buildPage() {
   buildQuickAK();
@@ -939,81 +939,86 @@ function updateAKCount() {
 function checkScore() {
   const roll = document.getElementById("chkRoll").value.trim();
   const name = document.getElementById("chkName").value.trim();
-  if (!roll) {
-    showScoreError("Please enter your Roll Number.");
-    return;
-  }
+  if (!roll) { showScoreError("Please enter your Roll Number."); return; }
 
-  const url = RESULTS_CONFIG.appsScriptUrl;
-  if (!url || url === "YOUR_GOOGLE_APPS_SCRIPT_URL_HERE") {
-    showScoreError("Score lookup requires the Google Apps Script backend to be configured.");
-    return;
-  }
-
-  // Show loading state
+  // Show spinner
   const resultEl = document.getElementById("scoreResult");
   resultEl.style.display = "block";
   resultEl.innerHTML = `
     <div style="text-align:center;padding:2rem;color:var(--gray-500);">
-      <div style="display:inline-block;width:32px;height:32px;border:3px solid var(--gray-200);border-top-color:var(--navy-500);border-radius:50%;animation:spin 0.8s linear infinite;margin-bottom:.75rem"></div>
+      <div style="display:inline-block;width:32px;height:32px;border:3px solid var(--gray-200);
+        border-top-color:var(--navy-500);border-radius:50%;
+        animation:_spin 0.8s linear infinite;margin-bottom:.75rem"></div>
       <div style="font-size:.9rem">Looking up your result…</div>
-    </div>`;
-  if (!document.getElementById("spin-style")) {
-    const st = document.createElement("style");
-    st.id = "spin-style";
-    st.textContent = "@keyframes spin{to{transform:rotate(360deg)}}";
-    document.head.appendChild(st);
-  }
+    </div>
+    <style>@keyframes _spin{to{transform:rotate(360deg)}}</style>`;
 
-  function handleData(data) {
-    if (data.status === "found") {
-      displayScore(data.answers, data.candidateName || name || roll, data.rollNumber || roll);
-    } else if (data.status === "notfound") {
-      showScoreError("Roll number not found. Please ensure your exam was submitted successfully.");
-    } else {
-      showScoreError("Server error: " + (data.message || "Unknown error. Please contact the coordinator."));
+  // Read directly from Google Sheet as CSV (no CORS issues, no Apps Script needed)
+  // Sheet must be: File → Share → Anyone with the link → Viewer
+  const SHEET_ID  = "1K7D3xz-O7R4KW-7iWZexIYO3fBObdIQ5XRvHPvEe0YQ";
+  // Fetch by sheet name "Responses" — works regardless of gid
+  const csvUrl    = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&sheet=Responses`;
+
+  fetch(csvUrl)
+    .then(r => {
+      if (!r.ok) throw new Error("HTTP " + r.status);
+      return r.text();
+    })
+    .then(csv => {
+      // If Google redirects to login, we get HTML not CSV
+      if (csv.trim().startsWith("<!DOCTYPE") || csv.trim().startsWith("<html")) {
+        throw new Error("SHEET_NOT_PUBLIC");
+      }
+      const rows = parseCSV(csv);
+      console.log("CSV rows found:", rows.length, rows);
+      if (rows.length < 2) {
+        showScoreError(
+          "Sheet returned " + rows.length + " row(s) — no data rows found. " +
+          "First 200 chars of response: <code style='font-size:.75rem;word-break:break-all'>" +
+          csv.replace(/</g,"&lt;").substring(0, 200) + "</code>"
+        );
+        return;
+      }
+      const rollLower = roll.trim().toLowerCase();
+      const match = rows.slice(1).find(r => (r[1] || "").trim().toLowerCase() === rollLower);
+      if (!match) {
+        showScoreError("Roll number <strong>" + roll + "</strong> not found in records. Make sure your exam was submitted successfully.");
+        return;
+      }
+      const answers = match.slice(9, 9 + 60);
+      displayScore(answers, match[0] || name || roll, match[1] || roll);
+    })
+    .catch(err => {
+      if (err.message === "SHEET_NOT_PUBLIC") {
+        showScoreError(
+          "<strong>Sheet not public.</strong> The coordinator needs to open the Google Sheet and go to " +
+          "<em>File → Share → Share with others → Change to Anyone with the link → Viewer → Done</em>. " +
+          "After that, score checking will work instantly."
+        );
+      } else {
+        showScoreError("Could not load results. Error: " + err.message);
+      }
+    });
+}
+
+// Simple CSV parser (handles quoted fields with commas)
+function parseCSV(text) {
+  const rows = [];
+  const lines = text.split(/\r?\n/);
+  for (const line of lines) {
+    if (!line.trim()) continue;
+    const cols = [];
+    let cur = "", inQ = false;
+    for (let i = 0; i < line.length; i++) {
+      const c = line[i];
+      if (c === '"') { inQ = !inQ; }
+      else if (c === ',' && !inQ) { cols.push(cur); cur = ""; }
+      else { cur += c; }
     }
+    cols.push(cur);
+    rows.push(cols);
   }
-
-  // ── Strategy 1: JSONP (works if Apps Script is deployed with callback support) ──
-  const cbName = "_cbt_cb_" + Date.now();
-  const script = document.createElement("script");
-  let jsonpDone = false;
-
-  const jsonpTimeout = setTimeout(() => {
-    if (jsonpDone) return;
-    jsonpDone = true;
-    delete window[cbName];
-    script.remove();
-    // ── Strategy 2: plain fetch fallback ──
-    fetch(url + "?action=getResult&roll=" + encodeURIComponent(roll))
-      .then(r => r.json())
-      .then(data => handleData(data))
-      .catch(() => showScoreError("Could not connect to the server. Please try again or contact the coordinator."));
-  }, 5000);
-
-  window[cbName] = function(data) {
-    if (jsonpDone) return;
-    jsonpDone = true;
-    clearTimeout(jsonpTimeout);
-    delete window[cbName];
-    script.remove();
-    handleData(data);
-  };
-
-  script.src = url + "?action=getResult&roll=" + encodeURIComponent(roll) + "&callback=" + cbName;
-  script.onerror = function() {
-    if (jsonpDone) return;
-    jsonpDone = true;
-    clearTimeout(jsonpTimeout);
-    delete window[cbName];
-    // fallback to fetch
-    fetch(url + "?action=getResult&roll=" + encodeURIComponent(roll))
-      .then(r => r.json())
-      .then(data => handleData(data))
-      .catch(() => showScoreError("Could not connect to the server. Please try again or contact the coordinator."));
-  };
-  document.head.appendChild(script);
+  return rows;
 }
 
 function displayScore(answersArr, name, roll) {
