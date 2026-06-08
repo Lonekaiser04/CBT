@@ -7,8 +7,8 @@ const EXAM_CONFIG = {
   day:    8,   // Exam day; 
 
   // Start time in IST (24-hour format)
-  startHour:   9,  // 10 = 10:00 AM
-  startMinute: 50,
+  startHour:   10,  // 10 = 10:00 AM
+  startMinute: 10,
 
   // How long the exam window stays open (minutes)
   // Candidates must START within this window; once started their
