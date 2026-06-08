@@ -358,6 +358,46 @@ body{font-family:var(--font);background:var(--gray-100);color:var(--gray-800);-w
   font-weight:700;font-size:.75rem;
   display:flex;align-items:center;justify-content:center;flex-shrink:0
 }
+/* ── Professional Score Card ── */
+.score-card-pro { font-family: inherit; border: 1px solid #d1d5db; border-radius: 12px; overflow: hidden; margin-top: 1.25rem; box-shadow: 0 4px 24px rgba(0,0,0,.10); }
+
+.scp-header { background: linear-gradient(135deg, #0f2d5e 0%, #1a4a8a 100%); color: #fff; display: flex; align-items: center; gap: 1rem; padding: 1.25rem 1.5rem; }
+.scp-logo-circle { width: 48px; height: 48px; border-radius: 50%; background: rgba(255,255,255,.15); border: 2px solid rgba(255,255,255,.4); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1rem; letter-spacing: .05em; flex-shrink: 0; }
+.scp-title-col { flex: 1; }
+.scp-exam-title { font-size: 1.1rem; font-weight: 700; letter-spacing: .02em; }
+.scp-exam-sub { font-size: .78rem; opacity: .8; margin-top: .2rem; }
+.scp-score-big { font-size: 2rem; font-weight: 800; letter-spacing: -.02em; white-space: nowrap; }
+.scp-score-big span { font-size: 1rem; font-weight: 400; opacity: .75; margin-left: 2px; }
+
+.scp-identity { display: flex; align-items: center; background: #f8fafc; border-bottom: 1px solid #e5e7eb; padding: .9rem 1.5rem; flex-wrap: wrap; gap: .5rem; }
+.scp-id-item { display: flex; flex-direction: column; flex: 1; min-width: 120px; }
+.scp-id-label { font-size: .68rem; font-weight: 700; color: #6b7280; letter-spacing: .08em; text-transform: uppercase; }
+.scp-id-value { font-size: .95rem; font-weight: 700; color: #0f2d5e; margin-top: .15rem; }
+.scp-id-divider { width: 1px; background: #d1d5db; align-self: stretch; margin: 0 .5rem; }
+
+.scp-stats { display: grid; grid-template-columns: repeat(5, 1fr); border-bottom: 1px solid #e5e7eb; }
+.scp-stat { padding: 1.1rem .75rem; text-align: center; border-right: 1px solid #e5e7eb; }
+.scp-stat:last-child { border-right: none; }
+.scp-stat-num { font-size: 1.6rem; font-weight: 800; line-height: 1; }
+.scp-stat-lbl { font-size: .72rem; font-weight: 600; color: #6b7280; margin-top: .3rem; text-transform: uppercase; letter-spacing: .05em; }
+.scp-stat-sub { font-size: .7rem; color: #9ca3af; margin-top: .2rem; }
+.scp-stat-total .scp-stat-num { color: #0f2d5e; }
+.scp-stat-correct .scp-stat-num { color: #16a34a; }
+.scp-stat-wrong .scp-stat-num { color: #dc2626; }
+.scp-stat-skip .scp-stat-num { color: #6b7280; }
+.scp-stat-pct .scp-stat-num { color: #d97706; }
+
+.scp-bar-wrap { padding: .9rem 1.5rem; background: #fff; border-bottom: 1px solid #e5e7eb; display: flex; align-items: center; gap: 1rem; }
+.scp-bar-track { flex: 1; height: 10px; background: #e5e7eb; border-radius: 99px; overflow: hidden; }
+.scp-bar-fill { height: 100%; border-radius: 99px; transition: width .6s ease; }
+.scp-bar-label { font-size: .78rem; color: #6b7280; white-space: nowrap; }
+
+.scp-verdict { display: flex; align-items: center; gap: .6rem; padding: .85rem 1.5rem; font-size: .88rem; font-weight: 500; }
+.verdict-good { background: #f0fdf4; color: #15803d; }
+.verdict-avg  { background: #fffbeb; color: #b45309; }
+.verdict-low  { background: #fef2f2; color: #b91c1c; }
+
+.scp-footer { font-size: .72rem; color: #9ca3af; text-align: center; padding: .6rem 1.5rem; background: #f8fafc; border-top: 1px solid #e5e7eb; }
 .ak-opt.opt-is-correct{background:var(--green-50);border-color:#86efac}
 .ak-opt.opt-is-correct .ak-opt-letter{background:var(--green-600);color:var(--white)}
 .ak-opt.opt-is-wrong{background:var(--red-50);border-color:#fca5a5}
@@ -597,25 +637,13 @@ body{font-family:var(--font);background:var(--gray-100);color:var(--gray-800);-w
 </div><!-- /.page -->
 
 <script>
-/* ═══════════════════════════════════════════════════════════
-   results.js  (embedded)
-   ──────────────────────────────────────────────────────────
-   ★ CONFIGURE THESE TWO BLOCKS:
-     1. RESULTS_CONFIG  — release date/time + Apps Script URL
-     2. ANSWER_KEY      — 60 correct answers (already filled)
-═══════════════════════════════════════════════════════════ */
 
-/* ╔═══════════════════════════════════════════╗
-   ║    ★  RESULTS PAGE CONFIG  ★             ║
-   ║   Edit this block to control access       ║
-   ╚═══════════════════════════════════════════╝ */
 const RESULTS_CONFIG = {
-  // When the answer key becomes publicly visible
-  // Set to a past date to show immediately, future date to lock
+
   releaseYear:   2026,
   releaseMonth:  5,      // 5 = June (0-based)
-  releaseDay:    8,     // Day after exam
-  releaseHour:   11,     // 6:00 PM IST
+  releaseDay:    12,     // Day after exam
+  releaseHour:   18,     // 6:00 PM IST
   releaseMinute: 0,
   tzOffsetMinutes: 330,  // IST = UTC+5:30
   appsScriptUrl: "https://script.google.com/macros/s/AKfycbx-6byRDwtkQ2lj7U_JQzfak_Q_RIGqfRRupC2VN_CxDvfE1ASF0mFJ5o0Ksp2ICgeS/exec",
@@ -1045,56 +1073,91 @@ function displayScore(answersArr, name, roll) {
     : {cls:"verdict-low",  icon:"!", text:`Below average. You scored ${pct}% — ${score.toFixed(2)} out of ${maxScore}. Keep practising!`};
 
   document.getElementById("scoreResult").style.display = "block";
-  document.getElementById("scoreResult").innerHTML = `
-    <div class="score-panel">
-      <div class="score-ring">
-        <svg viewBox="0 0 90 90">
-          <circle class="ring-bg"   cx="45" cy="45" r="36"/>
-          <circle class="ring-fill" cx="45" cy="45" r="36"
-            stroke="${ringColor}"
-            stroke-dasharray="${circumference}"
-            stroke-dashoffset="${offset}"/>
-        </svg>
-        <div class="score-ring-label">
-          <span class="score-pct">${pct}%</span>
-          <span class="score-pct-lbl">SCORE</span>
-        </div>
+document.getElementById("scoreResult").innerHTML = `
+  <div class="score-card-pro">
+
+    <!-- HEADER BANNER -->
+    <div class="scp-header">
+      <div class="scp-logo-col">
+        <div class="scp-logo-circle">KU</div>
       </div>
-      <div class="score-breakdown">
-        <div class="score-item">
-          <div class="score-item-dot dot-score"></div>
-          <div class="score-item-info">
-            <span class="score-item-val">${score.toFixed(2)}</span>
-            <span class="score-item-lbl">Total Score</span>
-          </div>
-        </div>
-        <div class="score-item">
-          <div class="score-item-dot dot-correct"></div>
-          <div class="score-item-info">
-            <span class="score-item-val">${correct}</span>
-            <span class="score-item-lbl">Correct (+${correct})</span>
-          </div>
-        </div>
-        <div class="score-item">
-          <div class="score-item-dot dot-wrong"></div>
-          <div class="score-item-info">
-            <span class="score-item-val">${wrong}</span>
-            <span class="score-item-lbl">Wrong (−${(wrong*0.25).toFixed(2)})</span>
-          </div>
-        </div>
-        <div class="score-item">
-          <div class="score-item-dot dot-skip"></div>
-          <div class="score-item-info">
-            <span class="score-item-val">${skip}</span>
-            <span class="score-item-lbl">Not Attempted</span>
-          </div>
-        </div>
-        <div class="score-verdict ${verdict.cls}" style="grid-column:1/-1">
-          <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/></svg>
-          <span>${verdict.text}</span>
-        </div>
+      <div class="scp-title-col">
+        <div class="scp-exam-title">University of Kashmir</div>
+        <div class="scp-exam-sub">BA LLB (Hons.) 5-Year Programme · Entrance Examination 2025–26</div>
       </div>
-    </div>`;
+      <div class="scp-score-big">${score.toFixed(2)}<span>/ ${maxScore}</span></div>
+    </div>
+
+    <!-- CANDIDATE IDENTITY ROW -->
+    <div class="scp-identity">
+      <div class="scp-id-item">
+        <span class="scp-id-label">ROLL NUMBER</span>
+        <span class="scp-id-value">${roll}</span>
+      </div>
+      <div class="scp-id-divider"></div>
+      <div class="scp-id-item">
+        <span class="scp-id-label">CANDIDATE NAME</span>
+        <span class="scp-id-value">${name || "—"}</span>
+      </div>
+      <div class="scp-id-divider"></div>
+      <div class="scp-id-item">
+        <span class="scp-id-label">EXAM DATE</span>
+        <span class="scp-id-value">2025–26</span>
+      </div>
+      <div class="scp-id-divider"></div>
+      <div class="scp-id-item">
+        <span class="scp-id-label">PERCENTILE</span>
+        <span class="scp-id-value">${pct}%</span>
+      </div>
+    </div>
+
+    <!-- SCORE STATS ROW -->
+    <div class="scp-stats">
+      <div class="scp-stat scp-stat-total">
+        <div class="scp-stat-num">${score.toFixed(2)}</div>
+        <div class="scp-stat-lbl">Total Score</div>
+        <div class="scp-stat-sub">Out of ${maxScore}</div>
+      </div>
+      <div class="scp-stat scp-stat-correct">
+        <div class="scp-stat-num">${correct}</div>
+        <div class="scp-stat-lbl">Correct</div>
+        <div class="scp-stat-sub">+${correct} marks</div>
+      </div>
+      <div class="scp-stat scp-stat-wrong">
+        <div class="scp-stat-num">${wrong}</div>
+        <div class="scp-stat-lbl">Incorrect</div>
+        <div class="scp-stat-sub">−${(wrong * 0.25).toFixed(2)} marks</div>
+      </div>
+      <div class="scp-stat scp-stat-skip">
+        <div class="scp-stat-num">${skip}</div>
+        <div class="scp-stat-lbl">Not Attempted</div>
+        <div class="scp-stat-sub">No deduction</div>
+      </div>
+      <div class="scp-stat scp-stat-pct">
+        <div class="scp-stat-num">${pct}%</div>
+        <div class="scp-stat-lbl">Score %</div>
+        <div class="scp-stat-sub">${pct >= 60 ? "Qualified" : "Needs Improvement"}</div>
+      </div>
+    </div>
+
+    <!-- PROGRESS BAR -->
+    <div class="scp-bar-wrap">
+      <div class="scp-bar-track">
+        <div class="scp-bar-fill" style="width:${pct}%;background:${ringColor}"></div>
+      </div>
+      <span class="scp-bar-label">${pct}% of total marks secured</span>
+    </div>
+
+    <!-- VERDICT -->
+    <div class="scp-verdict ${verdict.cls}">
+      <svg viewBox="0 0 20 20" fill="currentColor" width="18" height="18">
+        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+      </svg>
+      <span>${verdict.text}</span>
+    </div>
+
+    <div class="scp-footer">This scorecard is generated automatically. For official results, refer to the University of Kashmir official portal.</div>
+  </div>`;
 
   // Rebuild with user answers highlighted
   buildSectionTable(answersArr);

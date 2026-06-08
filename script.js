@@ -8,12 +8,12 @@ const EXAM_CONFIG = {
 
   // Start time in IST (24-hour format)
   startHour:   10,  // 10 = 10:00 AM
-  startMinute: 10,
+  startMinute: 0,   // 0 = on the hour
 
   windowMinutes: 90,   // 90-min window to log in & start
 
   // Exam duration per candidate (minutes)
-  durationMinutes: 70,
+  durationMinutes: 75,
 
   // Timezone offset from UTC in minutes (IST = UTC+5:30 = 330)
   tzOffsetMinutes: 330,
