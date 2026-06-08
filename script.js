@@ -25,7 +25,7 @@ const EXAM_CONFIG = {
 
 /* End of config ─────────────────────────────────── */
 
-const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxCEgv8n1LyPhk5Am1qZ8yF6kvYOeQgG1aTOLCA1XrD1sY1DzsEVj-J6FS65lMe4zhM/exec";
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxahS3i98dZyxbH_RwDAmJUbz8hkhbHbaX8H284hdonwbwX8-QLuY8LzTJnuZv3UkfC/exec";
 
 /* ─── Derived schedule values (do not edit) ─────── */
 function getExamWindowUTC() {
