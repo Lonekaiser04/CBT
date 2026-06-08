@@ -8,7 +8,7 @@ const EXAM_CONFIG = {
 
   // Start time in IST (24-hour format)
   startHour:   11,  // 10 = 10:00 AM
-  startMinute: 0,
+  startMinute: 11,
 
   windowMinutes: 90,   // 90-min window to log in & start
 
@@ -25,7 +25,7 @@ const EXAM_CONFIG = {
 
 /* End of config ─────────────────────────────────── */
 
-const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwMMQ5itwiBhF5dCNdtBpTtOzBeJ-B0kVBXswtRkgVIC0bECM7S4x4SC8-DNgfHnvRW/exec";
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxuQ-mS2SgxQfELt0u8L0ZKXtfi7U2-qaGkubTndEnJIyQvhqPIsTtOxRIyj1VSbOrc/exec";
 
 /* ─── Derived schedule values (do not edit) ─────── */
 function getExamWindowUTC() {
