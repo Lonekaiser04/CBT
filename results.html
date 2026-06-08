@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="theme-color" content="#0c1c3a"/>
+  <title>Answer Key & Results — CBT Model Test BA LL.B 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+
+<style>
+/* ═══════════════════════════════════════════════════
+   CBT Model Test Paper — Answer Key & Results
+   results.html  (standalone page)
+═══════════════════════════════════════════════════ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy-900:#060f22;--navy-800:#0c1c3a;--navy-700:#0f2144;
+  --navy-600:#163058;--navy-500:#1e4080;--navy-400:#2a5298;
+  --gold:#c8972a;--gold-lt:#e8bc5a;
+  --white:#fff;--gray-50:#f8f9fc;--gray-100:#eef0f6;
+  --gray-200:#dde1eb;--gray-300:#c4cad8;--gray-400:#9aa3b8;
+  --gray-500:#6b7591;--gray-600:#4a5270;--gray-700:#323b5a;--gray-800:#1e2540;
+  --green-700:#15803d;--green-600:#16a34a;--green-100:#dcfce7;--green-50:#f0fdf4;
+  --red-700:#b91c1c;--red-600:#dc2626;--red-100:#fee2e2;--red-50:#fff5f5;
+  --amber-600:#d97706;--amber-100:#fef3c7;
+  --font:'DM Sans',system-ui,sans-serif;
+  --serif:'Playfair Display',Georgia,serif;
+  --mono:'DM Mono','Courier New',monospace;
+  --sh-sm:0 2px 8px rgba(0,0,0,.08);
+  --sh-md:0 4px 20px rgba(0,0,0,.11);
+  --sh-lg:0 10px 40px rgba(0,0,0,.16);
+  --r:10px;--r-lg:14px;--r-xl:18px;
+}
+html{font-size:15px;scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--gray-100);color:var(--gray-800);-webkit-font-smoothing:antialiased}
+
+/* ── Page wrapper ── */
+.page{max-width:1100px;margin:0 auto;padding:1.5rem 1rem 4rem}
+
+/* ── Header ── */
+.site-header{
+  background:var(--navy-800);
+  padding:0;
+  position:sticky;top:0;z-index:100;
+  box-shadow:0 2px 12px rgba(0,0,0,.3);
+}
+.site-header-inner{
+  max-width:1100px;margin:0 auto;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:.75rem 1rem;gap:.75rem;
+}
+.hdr-brand{display:flex;align-items:center;gap:.7rem}
+.hdr-seal{
+  width:38px;height:38px;border-radius:50%;
+  background:var(--gold);color:var(--navy-800);
+  font-weight:700;font-size:.85rem;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0
+}
+.hdr-info{display:flex;flex-direction:column}
+.hdr-title{font-size:.82rem;font-weight:700;color:var(--white);white-space:nowrap}
+.hdr-sub{font-size:.7rem;color:rgba(255,255,255,.5)}
+.hdr-badge{
+  background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);
+  border-radius:20px;padding:.25rem .75rem;
+  font-size:.72rem;color:rgba(255,255,255,.7);white-space:nowrap
+}
+
+/* ── Page locked overlay ── */
+#lockedOverlay{
+  position:fixed;inset:0;z-index:999;
+  background:var(--navy-800);
+  display:flex;align-items:center;justify-content:center;
+  padding:1.5rem;
+}
+.locked-card{
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:20px;padding:2.5rem 2rem;
+  max-width:520px;width:100%;text-align:center;
+  box-shadow:var(--sh-lg);
+}
+.locked-icon{
+  width:72px;height:72px;border-radius:50%;
+  background:rgba(220,38,38,.2);border:2px solid rgba(220,38,38,.35);
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 1.25rem
+}
+.locked-icon svg{width:34px;height:34px;stroke:#fca5a5}
+.locked-title{font-family:var(--serif);font-size:1.7rem;color:var(--white);margin-bottom:.5rem}
+.locked-sub{font-size:.88rem;color:rgba(255,255,255,.5);line-height:1.65;margin-bottom:1.5rem}
+.locked-info{
+  background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);
+  border-radius:var(--r);padding:.9rem 1.1rem;margin-bottom:1.5rem;
+  font-size:.82rem;color:rgba(255,255,255,.55);line-height:1.6
+}
+.locked-time{
+  font-family:var(--mono);font-size:.92rem;color:var(--gold-lt);
+  background:rgba(200,151,42,.1);border:1px solid rgba(200,151,42,.2);
+  display:inline-block;padding:.3rem .8rem;border-radius:6px;margin-top:.35rem
+}
+.locked-countdown{
+  display:flex;align-items:center;justify-content:center;gap:.4rem;
+  margin-top:1rem
+}
+.lc-block{
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);
+  border-radius:8px;padding:.55rem .8rem;text-align:center;min-width:58px
+}
+.lc-num{font-family:var(--mono);font-size:1.6rem;font-weight:500;color:var(--white);line-height:1}
+.lc-lbl{font-size:.62rem;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.08em;margin-top:.15rem}
+.lc-colon{font-size:1.4rem;color:rgba(255,255,255,.25);padding-bottom:.6rem}
+
+/* ── Hero / intro ── */
+.result-hero{
+  background:linear-gradient(135deg,var(--navy-700) 0%,var(--navy-500) 100%);
+  border-radius:var(--r-xl);padding:2rem;margin-bottom:1.5rem;
+  display:flex;align-items:center;justify-content:space-between;gap:1.5rem;
+  box-shadow:var(--sh-md);
+}
+.hero-text h1{font-family:var(--serif);font-size:1.75rem;color:var(--white);margin-bottom:.3rem}
+.hero-text p{font-size:.85rem;color:rgba(255,255,255,.6);line-height:1.5}
+.hero-stats{display:flex;gap:.75rem;flex-shrink:0;flex-wrap:wrap}
+.hero-stat{
+  background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);
+  border-radius:var(--r);padding:.65rem 1rem;text-align:center;min-width:80px
+}
+.hero-stat-val{font-family:var(--mono);font-size:1.3rem;font-weight:500;color:var(--white);line-height:1}
+.hero-stat-lbl{font-size:.68rem;color:rgba(255,255,255,.5);margin-top:.2rem}
+
+/* ── Personal Score Checker ── */
+.checker-section{margin-bottom:1.5rem}
+.section-title{
+  font-size:.72rem;font-weight:700;text-transform:uppercase;
+  letter-spacing:.08em;color:var(--gray-400);margin-bottom:.65rem;
+  display:flex;align-items:center;gap:.5rem
+}
+.section-title::after{content:'';flex:1;height:1px;background:var(--gray-200)}
+
+.checker-card{
+  background:var(--white);border:1px solid var(--gray-200);
+  border-radius:var(--r-xl);box-shadow:var(--sh-sm);overflow:hidden
+}
+.checker-banner{
+  background:linear-gradient(135deg,var(--navy-700),var(--navy-500));
+  padding:1.1rem 1.5rem;
+  display:flex;align-items:center;gap:.75rem
+}
+.checker-banner-icon{
+  width:40px;height:40px;border-radius:50%;
+  background:rgba(255,255,255,.15);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0
+}
+.checker-banner-icon svg{width:20px;height:20px;stroke:var(--white)}
+.checker-banner-text h2{font-size:1rem;font-weight:700;color:var(--white)}
+.checker-banner-text p{font-size:.78rem;color:rgba(255,255,255,.6);margin-top:.1rem}
+
+.checker-body{padding:1.25rem 1.5rem}
+.checker-inputs{
+  display:grid;grid-template-columns:1fr 1fr auto;gap:.75rem;align-items:end;
+  margin-bottom:.75rem
+}
+.inp-group{display:flex;flex-direction:column;gap:.3rem}
+.inp-label{font-size:.75rem;font-weight:600;color:var(--gray-500);text-transform:uppercase;letter-spacing:.04em}
+.inp-field{
+  border:1.5px solid var(--gray-200);border-radius:var(--r);
+  padding:.65rem .9rem;font-family:var(--font);font-size:.92rem;color:var(--gray-800);
+  outline:none;transition:border-color .2s,box-shadow .2s;background:var(--white)
+}
+.inp-field:focus{border-color:var(--navy-500);box-shadow:0 0 0 3px rgba(42,82,152,.1)}
+.inp-field::placeholder{color:var(--gray-300)}
+.btn-check{
+  background:var(--navy-700);color:var(--white);
+  border:none;border-radius:var(--r);
+  padding:.68rem 1.4rem;
+  font-family:var(--font);font-size:.9rem;font-weight:700;
+  cursor:pointer;transition:background .2s,transform .1s;
+  white-space:nowrap;
+  display:flex;align-items:center;gap:.4rem
+}
+.btn-check svg{width:16px;height:16px}
+.btn-check:hover{background:var(--navy-500);transform:translateY(-1px)}
+
+/* Score result panel */
+#scoreResult{display:none}
+.score-panel{
+  background:var(--gray-50);border:1px solid var(--gray-200);
+  border-radius:var(--r-lg);padding:1.25rem 1.5rem;
+  display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap
+}
+.score-ring{
+  width:90px;height:90px;flex-shrink:0;position:relative
+}
+.score-ring svg{width:90px;height:90px;transform:rotate(-90deg)}
+.ring-bg{fill:none;stroke:var(--gray-200);stroke-width:8}
+.ring-fill{fill:none;stroke-width:8;stroke-linecap:round;transition:stroke-dashoffset .8s ease}
+.score-ring-label{
+  position:absolute;inset:0;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+}
+.score-pct{font-family:var(--mono);font-size:1.05rem;font-weight:500;color:var(--navy-800);line-height:1}
+.score-pct-lbl{font-size:.6rem;color:var(--gray-400);letter-spacing:.04em}
+
+.score-breakdown{flex:1;display:grid;grid-template-columns:repeat(2,1fr);gap:.6rem}
+.score-item{
+  background:var(--white);border:1px solid var(--gray-200);
+  border-radius:var(--r);padding:.6rem .8rem;
+  display:flex;align-items:center;gap:.6rem
+}
+.score-item-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.dot-correct{background:var(--green-600)}
+.dot-wrong{background:var(--red-600)}
+.dot-skip{background:var(--gray-300)}
+.dot-score{background:var(--navy-600)}
+.score-item-info{display:flex;flex-direction:column;gap:.05rem}
+.score-item-val{font-family:var(--mono);font-size:1rem;font-weight:500;color:var(--gray-800)}
+.score-item-lbl{font-size:.68rem;color:var(--gray-500)}
+
+.score-verdict{
+  width:100%;margin-top:.25rem;
+  border-radius:var(--r);padding:.7rem 1rem;
+  font-size:.85rem;font-weight:600;
+  display:flex;align-items:center;gap:.5rem
+}
+.score-verdict svg{width:18px;height:18px;flex-shrink:0}
+.verdict-good{background:var(--green-50);border:1px solid #bbf7d0;color:var(--green-700)}
+.verdict-avg {background:var(--amber-100);border:1px solid #fcd34d;color:var(--amber-600)}
+.verdict-low {background:var(--red-50);border:1px solid #fecaca;color:var(--red-700)}
+
+.score-error{
+  background:var(--red-50);border:1px solid #fecaca;border-radius:var(--r);
+  padding:.7rem 1rem;font-size:.85rem;color:var(--red-700);
+  display:flex;align-items:center;gap:.5rem
+}
+.score-error svg{width:16px;height:16px;flex-shrink:0}
+
+/* ── Section summary table ── */
+.section-table-wrap{overflow-x:auto;border-radius:var(--r-lg);border:1px solid var(--gray-200);box-shadow:var(--sh-sm)}
+.section-table{width:100%;border-collapse:collapse;background:var(--white);font-size:.83rem}
+.section-table th{
+  background:var(--navy-700);color:var(--white);
+  padding:.6rem .85rem;text-align:left;font-weight:600;font-size:.73rem;
+  text-transform:uppercase;letter-spacing:.04em;white-space:nowrap
+}
+.section-table td{
+  padding:.6rem .85rem;border-bottom:1px solid var(--gray-100);
+  vertical-align:middle
+}
+.section-table tr:last-child td{border-bottom:none}
+.section-table tr:hover td{background:var(--gray-50)}
+.sec-name{font-weight:600;color:var(--gray-700)}
+.sec-qs{color:var(--gray-500);font-family:var(--mono);font-size:.78rem}
+.sec-correct{color:var(--green-600);font-weight:700;font-family:var(--mono)}
+.sec-wrong{color:var(--red-600);font-weight:700;font-family:var(--mono)}
+.sec-skip{color:var(--gray-400);font-family:var(--mono)}
+.sec-score{color:var(--navy-700);font-weight:700;font-family:var(--mono)}
+.sec-bar-wrap{width:100px;background:var(--gray-200);border-radius:3px;height:6px;overflow:hidden}
+.sec-bar{height:6px;border-radius:3px;background:linear-gradient(90deg,var(--navy-500),var(--gold))}
+
+/* ── Answer Key table ── */
+.ak-filters{
+  display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;margin-bottom:.85rem
+}
+.ak-filter-btn{
+  padding:.35rem .85rem;border-radius:20px;font-size:.78rem;font-weight:600;
+  cursor:pointer;border:1.5px solid var(--gray-200);background:var(--white);
+  color:var(--gray-600);transition:all .15s
+}
+.ak-filter-btn.active-all    {background:var(--navy-700);border-color:var(--navy-700);color:var(--white)}
+.ak-filter-btn.active-correct{background:var(--green-600);border-color:var(--green-600);color:var(--white)}
+.ak-filter-btn.active-wrong  {background:var(--red-600);border-color:var(--red-600);color:var(--white)}
+.ak-filter-btn.active-skip   {background:var(--gray-500);border-color:var(--gray-500);color:var(--white)}
+
+.ak-search{
+  border:1.5px solid var(--gray-200);border-radius:20px;
+  padding:.35rem .9rem;font-family:var(--font);font-size:.82rem;
+  outline:none;width:200px;transition:border-color .2s
+}
+.ak-search:focus{border-color:var(--navy-400)}
+.ak-search::placeholder{color:var(--gray-300)}
+.ak-count{margin-left:auto;font-size:.75rem;color:var(--gray-400)}
+
+.ak-grid{display:flex;flex-direction:column;gap:.5rem}
+
+.ak-row{
+  background:var(--white);border:1px solid var(--gray-200);
+  border-radius:var(--r-lg);overflow:hidden;
+  transition:box-shadow .15s;
+}
+.ak-row:hover{box-shadow:var(--sh-sm)}
+
+.ak-row-head{
+  display:flex;align-items:stretch;cursor:pointer;
+  user-select:none;
+}
+.ak-qnum{
+  min-width:52px;
+  background:var(--navy-700);color:var(--white);
+  font-family:var(--mono);font-size:.8rem;font-weight:500;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;padding:.6rem
+}
+.ak-row.row-correct .ak-qnum{background:var(--green-600)}
+.ak-row.row-wrong   .ak-qnum{background:var(--red-600)}
+.ak-row.row-skip    .ak-qnum{background:var(--gray-400)}
+
+.ak-summary{
+  flex:1;padding:.6rem .9rem;
+  display:flex;align-items:center;gap:.75rem;min-width:0;flex-wrap:wrap
+}
+.ak-section-tag{
+  font-size:.68rem;font-weight:600;color:var(--gray-400);
+  text-transform:uppercase;letter-spacing:.04em;white-space:nowrap;flex-shrink:0
+}
+.ak-qtext-short{
+  font-size:.84rem;color:var(--gray-700);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1;min-width:0
+}
+.ak-answers{
+  display:flex;align-items:center;gap:.4rem;flex-shrink:0;flex-wrap:wrap
+}
+.ak-ans-tag{
+  font-family:var(--mono);font-size:.75rem;font-weight:600;
+  padding:.18rem .5rem;border-radius:5px;white-space:nowrap
+}
+.tag-correct{background:var(--green-100);color:var(--green-700);border:1px solid #bbf7d0}
+.tag-wrong  {background:var(--red-100);color:var(--red-700);border:1px solid #fecaca}
+.tag-skip   {background:var(--gray-100);color:var(--gray-500);border:1px solid var(--gray-200)}
+.tag-your   {background:var(--amber-100);color:var(--amber-600);border:1px solid #fcd34d}
+
+.ak-chevron{
+  padding:.6rem .9rem;display:flex;align-items:center;
+  color:var(--gray-400);flex-shrink:0
+}
+.ak-chevron svg{width:16px;height:16px;transition:transform .2s}
+.ak-row.expanded .ak-chevron svg{transform:rotate(180deg)}
+
+/* Expanded detail */
+.ak-detail{
+  display:none;border-top:1px solid var(--gray-100);
+  padding:1rem 1.1rem 1.1rem;background:var(--gray-50)
+}
+.ak-row.expanded .ak-detail{display:block}
+.ak-full-text{
+  font-size:.86rem;line-height:1.7;color:var(--gray-700);
+  margin-bottom:1rem;white-space:pre-wrap
+}
+.ak-opts{display:flex;flex-direction:column;gap:.4rem}
+.ak-opt{
+  display:flex;align-items:center;gap:.6rem;
+  font-size:.84rem;padding:.45rem .7rem;border-radius:var(--r);
+  border:1.5px solid var(--gray-200);background:var(--white);
+}
+.ak-opt-letter{
+  width:26px;height:26px;border-radius:50%;
+  background:var(--gray-200);color:var(--gray-600);
+  font-weight:700;font-size:.75rem;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0
+}
+.ak-opt.opt-is-correct{background:var(--green-50);border-color:#86efac}
+.ak-opt.opt-is-correct .ak-opt-letter{background:var(--green-600);color:var(--white)}
+.ak-opt.opt-is-wrong{background:var(--red-50);border-color:#fca5a5}
+.ak-opt.opt-is-wrong .ak-opt-letter{background:var(--red-600);color:var(--white)}
+.ak-opt-badges{display:flex;gap:.3rem;margin-left:auto;flex-shrink:0}
+.badge{font-size:.67rem;font-weight:700;padding:.12rem .45rem;border-radius:4px;letter-spacing:.02em}
+.badge-correct{background:var(--green-100);color:var(--green-700)}
+.badge-your   {background:var(--amber-100);color:var(--amber-600)}
+.badge-wrong  {background:var(--red-100);color:var(--red-700)}
+
+/* ── Quick answer key (compact grid) ── */
+.qak-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(54px,1fr));gap:.4rem;
+  margin-bottom:1.25rem
+}
+.qak-cell{
+  background:var(--white);border:1px solid var(--gray-200);
+  border-radius:var(--r);padding:.45rem .3rem;text-align:center
+}
+.qak-cell-num{font-size:.65rem;color:var(--gray-400);font-family:var(--mono)}
+.qak-cell-ans{
+  font-family:var(--mono);font-size:.9rem;font-weight:700;
+  color:var(--navy-700);line-height:1.2
+}
+.qak-cell.cell-correct .qak-cell-ans{color:var(--green-600)}
+.qak-cell.cell-wrong   .qak-cell-ans{color:var(--red-600)}
+.qak-cell.cell-skip    .qak-cell-ans{color:var(--gray-300)}
+
+/* ── Download button ── */
+.btn-download{
+  display:inline-flex;align-items:center;gap:.5rem;
+  background:var(--navy-700);color:var(--white);
+  border:none;border-radius:var(--r);
+  padding:.6rem 1.2rem;font-family:var(--font);font-size:.85rem;font-weight:600;
+  cursor:pointer;transition:background .2s;text-decoration:none
+}
+.btn-download:hover{background:var(--navy-500)}
+.btn-download svg{width:16px;height:16px}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar{width:6px;height:6px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:var(--gray-200);border-radius:3px}
+
+/* ── Responsive ── */
+@media(max-width:700px){
+  .result-hero{flex-direction:column;gap:1rem}
+  .hero-stats{width:100%;justify-content:space-between}
+  .hero-stat{flex:1;min-width:60px}
+  .checker-inputs{grid-template-columns:1fr 1fr;gap:.6rem}
+  .btn-check{grid-column:1/-1;justify-content:center}
+  .score-breakdown{grid-template-columns:1fr 1fr}
+  .section-table th,.section-table td{padding:.5rem .65rem}
+  .sec-bar-wrap{display:none}
+  .ak-qtext-short{display:none}
+  .ak-answers{gap:.3rem}
+  .page{padding:1rem .75rem 3rem}
+}
+@media(max-width:480px){
+  .hero-text h1{font-size:1.35rem}
+  .checker-inputs{grid-template-columns:1fr}
+  .btn-check{grid-column:1}
+  .score-panel{gap:.85rem}
+  .score-ring{width:76px;height:76px}
+  .score-ring svg{width:76px;height:76px}
+  .score-breakdown{grid-template-columns:1fr 1fr}
+  .qak-grid{grid-template-columns:repeat(auto-fill,minmax(46px,1fr))}
+  .locked-card{padding:1.75rem 1.25rem}
+  .locked-title{font-size:1.4rem}
+}
+
+/* Print */
+@media print{
+  .site-header,.checker-section,.ak-filters,.ak-search,.ak-count,
+  .btn-download,#lockedOverlay{display:none!important}
+  .ak-detail{display:block!important}
+  .page{max-width:100%;padding:0}
+  .ak-row{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+
+<!-- ══ LOCKED OVERLAY (shown until results are released) ══ -->
+<div id="lockedOverlay">
+  <div class="locked-card">
+    <div class="locked-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+        <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+      </svg>
+    </div>
+    <h1 class="locked-title">Results Not Released</h1>
+    <p class="locked-sub">The Answer Key and Results for <strong style="color:#e8bc5a">CBT Model Test Paper — BA LL.B 2026</strong> have not been released yet. Please check back after the official release date.</p>
+    <div class="locked-info">
+      Scheduled release:
+      <div class="locked-time" id="releaseTimeDisplay">—</div>
+    </div>
+    <div class="locked-countdown" id="lockedCountdown">
+      <div class="lc-block"><div class="lc-num" id="lcDays">00</div><div class="lc-lbl">Days</div></div>
+      <div class="lc-colon">:</div>
+      <div class="lc-block"><div class="lc-num" id="lcHours">00</div><div class="lc-lbl">Hours</div></div>
+      <div class="lc-colon">:</div>
+      <div class="lc-block"><div class="lc-num" id="lcMins">00</div><div class="lc-lbl">Mins</div></div>
+      <div class="lc-colon">:</div>
+      <div class="lc-block"><div class="lc-num" id="lcSecs">00</div><div class="lc-lbl">Secs</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ SITE HEADER ══ -->
+<header class="site-header">
+  <div class="site-header-inner">
+    <div class="hdr-brand">
+      <div class="hdr-seal">KU</div>
+      <div class="hdr-info">
+        <span class="hdr-title">CBT Model Test Paper — BA LL.B 2026</span>
+        <span class="hdr-sub">Official Answer Key &amp; Results</span>
+      </div>
+    </div>
+    <span class="hdr-badge">Model Paper 2026</span>
+  </div>
+</header>
+
+<!-- ══ PAGE CONTENT ══ -->
+<div class="page">
+
+  <!-- Hero -->
+  <div class="result-hero">
+    <div class="hero-text">
+      <h1>Answer Key &amp; Results</h1>
+      <p>CBT Model Test Paper — BA LL.B 2026 · 60 Questions · 60 Marks</p>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-val">60</div>
+        <div class="hero-stat-lbl">Questions</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-val">15</div>
+        <div class="hero-stat-lbl">Sections</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-val">+1</div>
+        <div class="hero-stat-lbl">Correct</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-val">−¼</div>
+        <div class="hero-stat-lbl">Wrong</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ PERSONAL SCORE CHECKER ══ -->
+  <div class="checker-section">
+    <div class="section-title">Personal Score Checker</div>
+    <div class="checker-card">
+      <div class="checker-banner">
+        <div class="checker-banner-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/>
+          </svg>
+        </div>
+        <div class="checker-banner-text">
+          <h2>Check Your Score</h2>
+          <p>Enter your Roll Number to instantly calculate your marks and see your detailed performance.</p>
+        </div>
+      </div>
+      <div class="checker-body">
+        <div class="checker-inputs">
+          <div class="inp-group">
+            <label class="inp-label" for="chkRoll">Roll Number</label>
+            <input class="inp-field" id="chkRoll" type="text" placeholder="e.g. KU2026001" autocomplete="off"/>
+          </div>
+          <div class="inp-group">
+            <label class="inp-label" for="chkName">Name (optional)</label>
+            <input class="inp-field" id="chkName" type="text" placeholder="For display only" autocomplete="off"/>
+          </div>
+          <button class="btn-check" onclick="checkScore()">
+            <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"/></svg>
+            Check Score
+          </button>
+        </div>
+        <div id="scoreResult"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ QUICK ANSWER KEY GRID ══ -->
+  <div id="quickAKSection">
+    <div class="section-title">Quick Answer Key</div>
+    <div class="qak-grid" id="quickAKGrid"></div>
+  </div>
+
+  <!-- ══ SECTION-WISE SUMMARY ══ -->
+  <div id="sectionSummarySection" style="margin-bottom:1.5rem">
+    <div class="section-title">Section-wise Summary</div>
+    <div class="section-table-wrap">
+      <table class="section-table" id="sectionTable">
+        <thead>
+          <tr>
+            <th>Section</th>
+            <th>Questions</th>
+            <th>Correct</th>
+            <th>Wrong</th>
+            <th>Skipped</th>
+            <th>Score</th>
+            <th style="width:110px">Performance</th>
+          </tr>
+        </thead>
+        <tbody id="sectionTableBody"></tbody>
+      </table>
+    </div>
+    <p style="font-size:.74rem;color:var(--gray-400);margin-top:.5rem;padding-left:.2rem">* Section-wise correct/wrong/skip shown after you check your score above.</p>
+  </div>
+
+  <!-- ══ DETAILED ANSWER KEY ══ -->
+  <div>
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.75rem;margin-bottom:.65rem">
+      <span class="section-title" style="margin-bottom:0;flex:1">Detailed Answer Key</span>
+      <button class="btn-download" onclick="downloadAnswerKey()">
+        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+        Download PDF
+      </button>
+    </div>
+    <div class="ak-filters">
+      <button class="ak-filter-btn active-all" data-filter="all"    onclick="setFilter('all',this)">All (60)</button>
+      <button class="ak-filter-btn" data-filter="correct" onclick="setFilter('correct',this)">✓ Correct</button>
+      <button class="ak-filter-btn" data-filter="wrong"   onclick="setFilter('wrong',this)">✗ Wrong</button>
+      <button class="ak-filter-btn" data-filter="skip"    onclick="setFilter('skip',this)">— Skipped</button>
+      <input class="ak-search" id="akSearch" type="text" placeholder="Search question…" oninput="applySearch()"/>
+      <span class="ak-count" id="akCount">Showing 60 questions</span>
+    </div>
+    <div class="ak-grid" id="akGrid"></div>
+  </div>
+
+</div><!-- /.page -->
+
+<script>
+/* ═══════════════════════════════════════════════════════════
+   results.js  (embedded)
+   ──────────────────────────────────────────────────────────
+   ★ CONFIGURE THESE TWO BLOCKS:
+     1. RESULTS_CONFIG  — release date/time + Apps Script URL
+     2. ANSWER_KEY      — 60 correct answers (already filled)
+═══════════════════════════════════════════════════════════ */
+
+/* ╔═══════════════════════════════════════════╗
+   ║    ★  RESULTS PAGE CONFIG  ★             ║
+   ║   Edit this block to control access       ║
+   ╚═══════════════════════════════════════════╝ */
+const RESULTS_CONFIG = {
+  // When the answer key becomes publicly visible
+  // Set to a past date to show immediately, future date to lock
+  releaseYear:   2026,
+  releaseMonth:  5,      // 5 = June (0-based)
+  releaseDay:    12,     // Day after exam
+  releaseHour:   18,     // 6:00 PM IST
+  releaseMinute: 0,
+  tzOffsetMinutes: 330,  // IST = UTC+5:30
+  appsScriptUrl: "https://script.google.com/macros/s/AKfycbxlbDB2sZEJDPPj-vkSZf46MgMj5HHfpnKobtATwgGoXL328DT7HKZ-g-aa8HZwrk0i/exec",
+};
+
+/* ╔═══════════════════════════════════════════╗
+   ║   ★  OFFICIAL ANSWER KEY (60 answers) ★  ║
+   ║   A=1st option, B=2nd, C=3rd, D=4th      ║
+   ╚═══════════════════════════════════════════╝ */
+const ANSWER_KEY = [
+  "C","C","B","C",   // Q1–4   Section I  History
+  "C","C","C","C",   // Q5–8   Section II Indian Polity
+  "C","C","C","B",   // Q9–12  Section III Geography
+  "C","B","C","C",   // Q13–16 Section IV Economics
+  "D","B","C","B",   // Q17–20 Section V  Science
+  "B","D","B","C",   // Q21–24 Section VI IT
+  "B","C","B","D",   // Q25–28 Section VII Current Affairs India
+  "D","B","B","C",   // Q29–32 Section VIII World Current Affairs
+  "C","B","B","C",   // Q33–36 Section IX Mathematics
+  "C","C","C","A",   // Q37–40 Section X  Statistics
+  "B","B","C","B",   // Q41–44 Section XI English
+  "B","A","C","C",   // Q45–48 Section XII Logical Reasoning
+  "C","D","A","D",   // Q49–52 Section XIII Analytical Reasoning
+  "C","C","C","B",   // Q53–56 Section XIV Legal Aptitude
+  "C","B","C","D",   // Q57–60 Section XV  Sports
+];
+
+/* Full question data (for answer key display) */
+const QUESTIONS = [
+  {s:"History",           t:"The 'Doctrine of Lapse' was applied to which territory?",                                          opts:["Hyderabad","Mysore","Satara","Kashmir"]},
+  {s:"History",           t:"Who founded the Indian National Congress in 1885?",                                                  opts:["Dadabhai Naoroji","Bal Gangadhar Tilak","A.O. Hume","Gopal Krishna Gokhale"]},
+  {s:"History",           t:"The Chauri Chaura incident of 1922 occurred in which state?",                                        opts:["Bihar","Uttar Pradesh","Bengal","Punjab"]},
+  {s:"History",           t:"The Kalinga War (261 BCE) was fought in present-day:",                                               opts:["Madhya Pradesh","Andhra Pradesh","Odisha","Chhattisgarh"]},
+  {s:"Indian Polity",     t:"Which Article guarantees the 'Right to Constitutional Remedies'?",                                   opts:["Article 19","Article 21","Article 32","Article 44"]},
+  {s:"Indian Polity",     t:"Directive Principles of State Policy are borrowed from the Constitution of:",                        opts:["USA","Canada","Ireland","France"]},
+  {s:"Indian Polity",     t:"Which writ quashes orders of a lower court acting beyond jurisdiction?",                             opts:["Mandamus","Habeas Corpus","Certiorari","Quo Warranto"]},
+  {s:"Indian Polity",     t:"Which amendment lowered voting age from 21 to 18 years?",                                            opts:["42nd Amendment, 1976","52nd Amendment, 1985","61st Amendment, 1988","73rd Amendment, 1992"]},
+  {s:"Geography",         t:"Wular Lake is located in which Union Territory?",                                                    opts:["Ladakh","Puducherry","Jammu & Kashmir","Lakshadweep"]},
+  {s:"Geography",         t:"Which river is known as the 'Sorrow of Bihar'?",                                                     opts:["Ganga","Son","Kosi","Gandak"]},
+  {s:"Geography",         t:"Which strait separates India from Sri Lanka?",                                                       opts:["Hormuz Strait","Bab-el-Mandeb Strait","Palk Strait","Malacca Strait"]},
+  {s:"Geography",         t:"Which desert is also known as the 'Great Indian Desert'?",                                           opts:["Rann of Kutch","Thar Desert","Deccan Plateau","Cold Desert, Ladakh"]},
+  {s:"Economics",         t:"The Human Development Index (HDI) is published annually by:",                                        opts:["World Bank","IMF","UNDP","WTO"]},
+  {s:"Economics",         t:"Which best describes 'Inflation'?",                                                                  opts:["Sustained decrease in prices","Sustained increase in prices","Increase in GDP","Decrease in interest rates"]},
+  {s:"Economics",         t:"Which Five Year Plan focused on 'Garibi Hatao'?",                                                    opts:["Third (1961–66)","Fourth (1969–74)","Fifth (1974–79)","Sixth (1980–85)"]},
+  {s:"Economics",         t:"GST is an example of which type of tax?",                                                            opts:["Direct Tax","Progressive Tax","Indirect Tax","Wealth Tax"]},
+  {s:"Science",           t:"Which vitamin is produced when skin is exposed to sunlight?",                                        opts:["Vitamin A","Vitamin B12","Vitamin C","Vitamin D"]},
+  {s:"Science",           t:"The chemical formula of Ozone is:",                                                                  opts:["O₂","O₃","CO₂","H₂O₂"]},
+  {s:"Science",           t:"Which part of the eye controls the amount of light entering?",                                       opts:["Retina","Cornea","Iris","Lens"]},
+  {s:"Science",           t:"Newton's Second Law: Force equals:",                                                                 opts:["Mass × Velocity","Mass × Acceleration","Mass / Acceleration","Velocity / Time"]},
+  {s:"Information Tech",  t:"What is the full form of 'Wi-Fi'?",                                                                  opts:["Wired Fidelity","Wireless Fidelity","Wide Frequency","Wireless Frequency Interface"]},
+  {s:"Information Tech",  t:"Which is NOT an example of an Operating System?",                                                    opts:["Windows 11","Android","Linux","Microsoft Word"]},
+  {s:"Information Tech",  t:"What does 'CPU' stand for?",                                                                         opts:["Central Process Unit","Central Processing Unit","Computer Processing Unit","Core Processing Utility"]},
+  {s:"Information Tech",  t:"Which file format is associated with compressed archive files?",                                     opts:[".docx",".mp3",".zip",".html"]},
+  {s:"Current Affairs-IN",t:"Operation Sindoor (May 2025) targeted terrorist infrastructure in:",                                 opts:["Afghanistan & Pakistan","Pakistan & PoK","Bangladesh & Myanmar","China-occupied Aksai Chin"]},
+  {s:"Current Affairs-IN",t:"Who succeeded Justice D.Y. Chandrachud as Chief Justice of India?",                                  opts:["Justice Arun Pallai","Justice Rajesh Bindal","Justice Sanjiv Khanna","Justice Suryakant"]},
+  {s:"Current Affairs-IN",t:"'Mission Mausam' (2024) relates to which sector?",                                                   opts:["Space exploration","Weather & meteorology","Agricultural irrigation","Renewable energy"]},
+  {s:"Current Affairs-IN",t:"Which city hosted the G20 Summit in September 2023?",                                                opts:["Mumbai","Chennai","Kolkata","New Delhi"]},
+  {s:"World Affairs",     t:"First country to land spacecraft near Moon's south pole (2023)?",                                    opts:["United States","China","Russia","India"]},
+  {s:"World Affairs",     t:"Who won the Nobel Peace Prize 2024?",                                                                opts:["Malala Yousafzai","Nihon Hidankyo","Narges Mohammadi","World Food Programme"]},
+  {s:"World Affairs",     t:"Which organisation has headquarters in Geneva, Switzerland?",                                        opts:["United Nations","World Trade Organization","IMF","Asian Development Bank"]},
+  {s:"World Affairs",     t:"The Paris Agreement (2015) primarily aims at:",                                                      opts:["Reducing nuclear weapons","Regulating trade disputes","Combating climate change","Establishing cybersecurity norms"]},
+  {s:"Mathematics",       t:"Shopkeeper buys for ₹800, sells at 25% profit. Selling price?",                                     opts:["₹900","₹950","₹1,000","₹1,100"]},
+  {s:"Mathematics",       t:"Pipes A & B fill tank in 12 & 18 min. Together they take?",                                         opts:["6 minutes","7.2 minutes","8 minutes","9 minutes"]},
+  {s:"Mathematics",       t:"Train 150m long passes a pole in 15 sec. Speed in km/hr?",                                          opts:["30 km/hr","36 km/hr","40 km/hr","54 km/hr"]},
+  {s:"Mathematics",       t:"Boys:Girls = 3:2, total 60 students. How many girls?",                                              opts:["18","20","24","30"]},
+  {s:"Statistics",        t:"Mean of 5 numbers is 18. One excluded, mean = 16. Excluded number?",                                opts:["22","24","26","28"]},
+  {s:"Statistics",        t:"Range of data: 12, 7, 19, 4, 25, 11?",                                                              opts:["18","19","21","25"]},
+  {s:"Statistics",        t:"A sector represents 25%. Its angle in a pie chart?",                                                 opts:["60°","72°","90°","120°"]},
+  {s:"Statistics",        t:"Variance = 36. Standard deviation?",                                                                 opts:["6","9","12","18"]},
+  {s:"English",           t:"What does the author mean by 'living force'?",                                                       opts:["Law changes yearly","Law is dynamic & shapes society","Law written by living persons","Law for living individuals only"]},
+  {s:"English",           t:"Meaning of 'perilous' as used in the passage?",                                                     opts:["Beneficial","Dangerous","Slow","Complicated"]},
+  {s:"English",           t:"Central idea of the passage?",                                                                      opts:["Laws by experienced lawyers","Speed > fairness","Justice must be timely AND fair","Punishment is sole purpose"]},
+  {s:"English",           t:"Opposite of 'deliberation' as used in the passage?",                                                opts:["Contemplation","Recklessness","Judgment","Prudence"]},
+  {s:"Logical Reasoning", t:"All doctors are engineers; some engineers are teachers. Conclusions?",                              opts:["Only I follows","Only II follows","Both follow","Neither follows"]},
+  {s:"Logical Reasoning", t:"JUSTICE → KWUVKEG; LEGAL → ?",                                                                     opts:["MGICN","NFHBM","MHIBN","NGHCM"]},
+  {s:"Logical Reasoning", t:"Book : Library :: Painting : ?",                                                                    opts:["Artist","Canvas","Gallery","Museum"]},
+  {s:"Logical Reasoning", t:"Next in series: 3, 6, 12, 24, 48, __?",                                                             opts:["72","84","96","100"]},
+  {s:"Analytical",        t:"40 students; 18 cricket, 16 football, 8 both. Neither?",                                           opts:["10","12","14","16"]},
+  {s:"Analytical",        t:"Raza>Salim>Tariq; Tariq<Umar but Tariq>Waseem. Shortest?",                                         opts:["Salim","Tariq","Umar","Waseem"]},
+  {s:"Analytical",        t:"Six in a row; E extreme left. Who is extreme right?",                                               opts:["A","F","D","C"]},
+  {s:"Analytical",        t:"Odd one out: Advocate, Judge, Barrister, Solicitor, Carpenter",                                    opts:["Advocate","Judge","Solicitor","Carpenter"]},
+  {s:"Legal Aptitude",    t:"Arif breaches saffron delivery contract. What must he pay?",                                        opts:["Nothing","Refund ₹2,00,000 only","Compensate ₹80,000 actual loss","Pay ₹5,00,000 penalty"]},
+  {s:"Legal Aptitude",    t:"Salman shot unarmed thief snatching wallet. Decision?",                                             opts:["Fully justified","Not liable","Exceeded private defence","Thief at fault only"]},
+  {s:"Legal Aptitude",    t:"Kamil forced Yusuf to sign at knifepoint. Can Yusuf cancel?",                                      opts:["Agreement valid","Void ab initio","Yusuf can cancel (coercion)","Only court can cancel"]},
+  {s:"Legal Aptitude",    t:"'Mens Rea' in criminal law means:",                                                                 opts:["Physical act of crime","Guilty mind / criminal intention","Punishment prescribed","Process of filing FIR"]},
+  {s:"Sports",            t:"Where were the Summer Olympics 2024 held?",                                                         opts:["Los Angeles","Tokyo","Paris","London"]},
+  {s:"Sports",            t:"First batter to score 10,000 T20I runs?",                                                          opts:["Rohit Sharma","Virat Kohli","MS Dhoni","Shikhar Dhawan"]},
+  {s:"Sports",            t:"'Love' in Tennis means a score of:",                                                                opts:["15","30","0 (Zero)","40"]},
+  {s:"Sports",            t:"Neeraj Chopra competes in which event?",                                                            opts:["Shot Put","Discus Throw","Hammer Throw","Javelin Throw"]},
+];
+
+/* ─── Sections map (for grouping) ─── */
+const SECTIONS = [
+  {name:"History",             qs:[1,2,3,4]},
+  {name:"Indian Polity",       qs:[5,6,7,8]},
+  {name:"Geography",           qs:[9,10,11,12]},
+  {name:"Economics",           qs:[13,14,15,16]},
+  {name:"Science",             qs:[17,18,19,20]},
+  {name:"Information Tech",    qs:[21,22,23,24]},
+  {name:"Current Affairs (IN)",qs:[25,26,27,28]},
+  {name:"World Affairs",       qs:[29,30,31,32]},
+  {name:"Mathematics",         qs:[33,34,35,36]},
+  {name:"Statistics",          qs:[37,38,39,40]},
+  {name:"English",             qs:[41,42,43,44]},
+  {name:"Logical Reasoning",   qs:[45,46,47,48]},
+  {name:"Analytical Reasoning",qs:[49,50,51,52]},
+  {name:"Legal Aptitude",      qs:[53,54,55,56]},
+  {name:"Sports",              qs:[57,58,59,60]},
+];
+
+/* ═══ RELEASE GATE ═══ */
+function getReleaseMs() {
+  return Date.UTC(
+    RESULTS_CONFIG.releaseYear, RESULTS_CONFIG.releaseMonth,
+    RESULTS_CONFIG.releaseDay,  RESULTS_CONFIG.releaseHour,
+    RESULTS_CONFIG.releaseMinute, 0, 0
+  ) - RESULTS_CONFIG.tzOffsetMinutes * 60000;
+}
+
+(function gateCheck() {
+  const releaseMs = getReleaseMs();
+  const now = Date.now();
+  if (now >= releaseMs) {
+    // Released — hide overlay and build page
+    document.getElementById("lockedOverlay").style.display = "none";
+    buildPage();
+  } else {
+    // Locked — show countdown then auto-reveal
+    showLockedCountdown(releaseMs);
+  }
+})();
+
+function showLockedCountdown(releaseMs) {
+  const dt = new Date(releaseMs);
+  document.getElementById("releaseTimeDisplay").textContent =
+    dt.toLocaleString("en-IN",{weekday:"long",year:"numeric",month:"long",day:"numeric",hour:"2-digit",minute:"2-digit",timeZoneName:"short"});
+
+  function tick() {
+    const diff = releaseMs - Date.now();
+    if (diff <= 0) { location.reload(); return; }
+    const s = Math.floor(diff/1000);
+    const d=Math.floor(s/86400), h=Math.floor((s%86400)/3600), m=Math.floor((s%3600)/60), sec=s%60;
+    document.getElementById("lcDays").textContent  = String(d).padStart(2,"0");
+    document.getElementById("lcHours").textContent = String(h).padStart(2,"0");
+    document.getElementById("lcMins").textContent  = String(m).padStart(2,"0");
+    document.getElementById("lcSecs").textContent  = String(sec).padStart(2,"0");
+  }
+  tick(); setInterval(tick, 1000);
+}
+
+/* ═══ BUILD PAGE ═══ */
+let userAnswers = null; // filled when candidate checks score
+let activeFilter = "all";
+
+function buildPage() {
+  buildQuickAK();
+  buildSectionTable(null);
+  buildDetailedAK();
+}
+
+/* ── Quick Answer Key grid ── */
+function buildQuickAK() {
+  const grid = document.getElementById("quickAKGrid");
+  grid.innerHTML = "";
+  ANSWER_KEY.forEach((ans, i) => {
+    const cell = document.createElement("div");
+    cell.className = "qak-cell";
+    cell.id = `qak-${i}`;
+    cell.innerHTML = `<div class="qak-cell-num">Q${i+1}</div><div class="qak-cell-ans">${ans}</div>`;
+    grid.appendChild(cell);
+  });
+}
+
+/* ── Section table ── */
+function buildSectionTable(userAns) {
+  const tbody = document.getElementById("sectionTableBody");
+  tbody.innerHTML = "";
+  SECTIONS.forEach(sec => {
+    const qs = sec.qs;
+    let correct=0, wrong=0, skip=0;
+    qs.forEach(qn => {
+      const i = qn-1;
+      if (!userAns || userAns[i] === null || userAns[i] === undefined || userAns[i] === "") {
+        skip++;
+      } else if (userAns[i] === ANSWER_KEY[i]) {
+        correct++;
+      } else {
+        wrong++;
+      }
+    });
+    const score = correct - wrong * 0.25;
+    const pct = Math.max(0, (score / qs.length) * 100);
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <td><span class="sec-name">${sec.name}</span></td>
+      <td><span class="sec-qs">${qs[0]}–${qs[qs.length-1]}</span></td>
+      <td><span class="sec-correct">${userAns ? correct : "—"}</span></td>
+      <td><span class="sec-wrong">${userAns ? wrong : "—"}</span></td>
+      <td><span class="sec-skip">${userAns ? skip : "—"}</span></td>
+      <td><span class="sec-score">${userAns ? score.toFixed(2) : "—"}</span></td>
+      <td>
+        <div class="sec-bar-wrap">
+          <div class="sec-bar" style="width:${userAns ? pct : 0}%"></div>
+        </div>
+      </td>`;
+    tbody.appendChild(tr);
+  });
+}
+
+/* ── Detailed Answer Key ── */
+function buildDetailedAK() {
+  const grid = document.getElementById("akGrid");
+  grid.innerHTML = "";
+  QUESTIONS.forEach((q, i) => {
+    const row = buildAKRow(q, i);
+    grid.appendChild(row);
+  });
+  updateAKCount();
+}
+
+function buildAKRow(q, i) {
+  const correctLetter = ANSWER_KEY[i];
+  const correctIdx    = ["A","B","C","D"].indexOf(correctLetter);
+  const userLetter    = userAnswers ? (userAnswers[i] || null) : null;
+  const userIdx       = userLetter ? ["A","B","C","D"].indexOf(userLetter) : -1;
+
+  let rowClass = "ak-row";
+  let statusTags = `<span class="ak-ans-tag tag-correct">✓ ${correctLetter}: ${q.opts[correctIdx]}</span>`;
+
+  if (userAnswers) {
+    if (!userLetter) {
+      rowClass += " row-skip";
+      statusTags += `<span class="ak-ans-tag tag-skip">— Not Attempted</span>`;
+    } else if (userLetter === correctLetter) {
+      rowClass += " row-correct";
+      statusTags += `<span class="ak-ans-tag tag-correct">Your Answer: ${userLetter} ✓</span>`;
+    } else {
+      rowClass += " row-wrong";
+      statusTags += `<span class="ak-ans-tag tag-wrong">Your Answer: ${userLetter} ✗</span>`;
+    }
+  }
+
+  const row = document.createElement("div");
+  row.className = rowClass;
+  row.dataset.idx = i;
+  row.dataset.status = userAnswers
+    ? (!userLetter ? "skip" : userLetter === correctLetter ? "correct" : "wrong")
+    : "all";
+
+  // Options HTML for expanded detail
+  let optsHtml = "";
+  q.opts.forEach((opt, oi) => {
+    const letter = ["A","B","C","D"][oi];
+    let cls = "ak-opt";
+    let badges = "";
+    if (letter === correctLetter) { cls += " opt-is-correct"; badges += `<span class="badge badge-correct">Correct</span>`; }
+    if (userAnswers && letter === userLetter && userLetter !== correctLetter) { cls += " opt-is-wrong"; badges += `<span class="badge badge-wrong">Your Answer</span>`; }
+    if (userAnswers && letter === userLetter && userLetter === correctLetter) { badges += `<span class="badge badge-your">Your Answer</span>`; }
+    optsHtml += `<div class="${cls}"><span class="ak-opt-letter">${letter}</span><span>${escH(opt)}</span><div class="ak-opt-badges">${badges}</div></div>`;
+  });
+
+  row.innerHTML = `
+    <div class="ak-row-head" onclick="toggleRow(this.parentElement)">
+      <div class="ak-qnum">Q${i+1}</div>
+      <div class="ak-summary">
+        <span class="ak-section-tag">${q.s}</span>
+        <span class="ak-qtext-short">${escH(q.t)}</span>
+        <div class="ak-answers">${statusTags}</div>
+      </div>
+      <div class="ak-chevron">
+        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+      </div>
+    </div>
+    <div class="ak-detail">
+      <p class="ak-full-text">${escH(q.t)}</p>
+      <div class="ak-opts">${optsHtml}</div>
+    </div>`;
+
+  return row;
+}
+
+function toggleRow(row) {
+  row.classList.toggle("expanded");
+}
+
+/* ── Filter ── */
+function setFilter(filter, btn) {
+  activeFilter = filter;
+  document.querySelectorAll(".ak-filter-btn").forEach(b => {
+    b.className = "ak-filter-btn";
+  });
+  btn.className = "ak-filter-btn active-" + filter;
+  applySearch();
+}
+
+function applySearch() {
+  const term = (document.getElementById("akSearch").value || "").toLowerCase();
+  let visible = 0;
+  document.querySelectorAll(".ak-row").forEach(row => {
+    const idx    = parseInt(row.dataset.idx);
+    const status = row.dataset.status || "all";
+    const text   = QUESTIONS[idx].t.toLowerCase() + " " + QUESTIONS[idx].s.toLowerCase();
+    const filterOk = activeFilter === "all" || status === activeFilter;
+    const searchOk = !term || text.includes(term);
+    const show = filterOk && searchOk;
+    row.style.display = show ? "" : "none";
+    if (show) visible++;
+  });
+  document.getElementById("akCount").textContent = `Showing ${visible} question${visible!==1?"s":""}`;
+}
+
+function updateAKCount() {
+  document.getElementById("akCount").textContent = `Showing ${QUESTIONS.length} questions`;
+}
+
+/* ─────────────────────────────────────────────
+   SCORE CHECKER
+   Tries Apps Script first; falls back to local
+   matching if URL not configured.
+───────────────────────────────────────────── */
+function checkScore() {
+  const roll = document.getElementById("chkRoll").value.trim();
+  const name = document.getElementById("chkName").value.trim();
+  if (!roll) {
+    showScoreError("Please enter your Roll Number.");
+    return;
+  }
+
+  const url = RESULTS_CONFIG.appsScriptUrl;
+  if (url && url !== "YOUR_GOOGLE_APPS_SCRIPT_URL_HERE") {
+    // Fetch from Google Sheets via Apps Script
+    const fetchUrl = url + "?action=getResult&roll=" + encodeURIComponent(roll);
+    fetch(fetchUrl)
+      .then(r => r.json())
+      .then(data => {
+        if (data.status === "found") {
+          displayScore(data.answers, data.candidateName || name || roll, data.rollNumber || roll);
+        } else {
+          showScoreError("Roll number not found. Please ensure your exam was submitted successfully.");
+        }
+      })
+      .catch(() => {
+        showScoreError("Could not connect to the server. Please try again or contact the coordinator.");
+      });
+  } else {
+    // ── DEMO MODE: no Apps Script connected ──
+    // Shows how the score panel looks; replace with real data
+    showScoreError(
+      "Score lookup requires the Google Apps Script backend to be configured. " +
+      "If you are the admin, set appsScriptUrl in RESULTS_CONFIG. " +
+      "Candidates should contact the examination coordinator with their Roll Number."
+    );
+  }
+}
+
+function displayScore(answersArr, name, roll) {
+  userAnswers = answersArr;
+
+  let correct=0, wrong=0, skip=0;
+  answersArr.forEach((ans, i) => {
+    if (!ans || ans === "") skip++;
+    else if (ans === ANSWER_KEY[i]) correct++;
+    else wrong++;
+  });
+  const score    = correct - wrong * 0.25;
+  const maxScore = QUESTIONS.length;
+  const pct      = Math.max(0, Math.round((score / maxScore) * 100));
+
+  // Ring
+  const circumference = 2 * Math.PI * 36; // r=36
+  const offset = circumference - (pct / 100) * circumference;
+  const ringColor = pct >= 60 ? "#16a34a" : pct >= 40 ? "#d97706" : "#dc2626";
+  const verdict   = pct >= 60
+    ? {cls:"verdict-good", icon:"✓", text:`Excellent performance! You scored ${pct}% — ${score.toFixed(2)} out of ${maxScore}.`}
+    : pct >= 40
+    ? {cls:"verdict-avg",  icon:"~", text:`Average performance. You scored ${pct}% — ${score.toFixed(2)} out of ${maxScore}.`}
+    : {cls:"verdict-low",  icon:"!", text:`Below average. You scored ${pct}% — ${score.toFixed(2)} out of ${maxScore}. Keep practising!`};
+
+  document.getElementById("scoreResult").style.display = "block";
+  document.getElementById("scoreResult").innerHTML = `
+    <div class="score-panel">
+      <div class="score-ring">
+        <svg viewBox="0 0 90 90">
+          <circle class="ring-bg"   cx="45" cy="45" r="36"/>
+          <circle class="ring-fill" cx="45" cy="45" r="36"
+            stroke="${ringColor}"
+            stroke-dasharray="${circumference}"
+            stroke-dashoffset="${offset}"/>
+        </svg>
+        <div class="score-ring-label">
+          <span class="score-pct">${pct}%</span>
+          <span class="score-pct-lbl">SCORE</span>
+        </div>
+      </div>
+      <div class="score-breakdown">
+        <div class="score-item">
+          <div class="score-item-dot dot-score"></div>
+          <div class="score-item-info">
+            <span class="score-item-val">${score.toFixed(2)}</span>
+            <span class="score-item-lbl">Total Score</span>
+          </div>
+        </div>
+        <div class="score-item">
+          <div class="score-item-dot dot-correct"></div>
+          <div class="score-item-info">
+            <span class="score-item-val">${correct}</span>
+            <span class="score-item-lbl">Correct (+${correct})</span>
+          </div>
+        </div>
+        <div class="score-item">
+          <div class="score-item-dot dot-wrong"></div>
+          <div class="score-item-info">
+            <span class="score-item-val">${wrong}</span>
+            <span class="score-item-lbl">Wrong (−${(wrong*0.25).toFixed(2)})</span>
+          </div>
+        </div>
+        <div class="score-item">
+          <div class="score-item-dot dot-skip"></div>
+          <div class="score-item-info">
+            <span class="score-item-val">${skip}</span>
+            <span class="score-item-lbl">Not Attempted</span>
+          </div>
+        </div>
+        <div class="score-verdict ${verdict.cls}" style="grid-column:1/-1">
+          <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/></svg>
+          <span>${verdict.text}</span>
+        </div>
+      </div>
+    </div>`;
+
+  // Rebuild with user answers highlighted
+  buildSectionTable(answersArr);
+  buildDetailedAK();
+  updateQuickAKColors(answersArr);
+
+  // Scroll to score
+  document.getElementById("scoreResult").scrollIntoView({behavior:"smooth", block:"nearest"});
+}
+
+function updateQuickAKColors(ans) {
+  ans.forEach((a, i) => {
+    const cell = document.getElementById(`qak-${i}`);
+    if (!cell) return;
+    cell.className = "qak-cell";
+    if (!a || a === "") cell.classList.add("cell-skip");
+    else if (a === ANSWER_KEY[i]) cell.classList.add("cell-correct");
+    else cell.classList.add("cell-wrong");
+  });
+}
+
+function showScoreError(msg) {
+  document.getElementById("scoreResult").style.display = "block";
+  document.getElementById("scoreResult").innerHTML = `
+    <div class="score-error">
+      <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/></svg>
+      <span>${msg}</span>
+    </div>`;
+}
+
+/* ── Download ── */
+function downloadAnswerKey() {
+  window.print();
+}
+
+/* ── Utility ── */
+function escH(s) {
+  return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+}
+</script>
+
+</body>
+</html>

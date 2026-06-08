@@ -1,0 +1,11 @@
+# Backend & docs — not needed on the website
+google-apps-script.js
+SETUP-INSTRUCTIONS.md
+HOW-TO-DISPLAY-RESULTS.md
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor folders
+.vscode/
+.idea/

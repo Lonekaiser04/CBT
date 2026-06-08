@@ -1,231 +1,518 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>KU BA LL.B Entrance Test 2026</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+  <meta name="theme-color" content="#0c1c3a"/>
+  <title>CBT Model Test Paper — BA LL.B 2026</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
 </head>
 <body>
 
-<!-- ══════════════════════════════════════════
-     REGISTRATION SCREEN
-══════════════════════════════════════════ -->
-<div id="registration-screen" class="screen active">
-  <div class="reg-bg-grid"></div>
-  <div class="reg-container">
-    <div class="reg-logo">
-      <div class="reg-emblem">KU</div>
-      <div class="reg-logo-text">
-        <span class="reg-uni">University of Kashmir</span>
-        <span class="reg-prog">BA LL.B (Hons.) Integrated Programme</span>
+<!-- ═══════════════════════════════════════════════
+     SCREEN 0-A  ·  BEFORE EXAM (not yet open)
+═══════════════════════════════════════════════ -->
+<div id="before-screen" class="screen">
+  <div class="gate-bg">
+    <div class="gate-orb orb1"></div>
+    <div class="gate-orb orb2"></div>
+    <div class="gate-orb orb3"></div>
+    <div class="gate-grid"></div>
+  </div>
+
+  <div class="gate-wrap">
+    <div class="gate-card">
+
+      <div class="gate-logo">
+        <div class="gate-seal">KU</div>
+        <div class="gate-title">
+          <span class="gate-uni">CBT Model Test</span>
+          <span class="gate-prog">Model Test Paper for BA LL.B</span>
+        </div>
       </div>
+
+      <div class="gate-divider"></div>
+
+      <div class="gate-status gate-status-before">
+        <div class="gate-status-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12 6 12 12 16 14"/>
+          </svg>
+        </div>
+        <h1 class="gate-heading">Exam Not Yet Started</h1>
+        <p class="gate-sub">The examination window will open at:</p>
+        <p class="gate-datetime" id="scheduledDateTime">Loading…</p>
+      </div>
+
+      <div class="cnt-grid">
+        <div class="cnt-block">
+          <div class="cnt-num" id="cntDays">00</div>
+          <div class="cnt-lbl">Days</div>
+        </div>
+        <div class="cnt-colon">:</div>
+        <div class="cnt-block">
+          <div class="cnt-num" id="cntHours">00</div>
+          <div class="cnt-lbl">Hours</div>
+        </div>
+        <div class="cnt-colon">:</div>
+        <div class="cnt-block">
+          <div class="cnt-num" id="cntMins">00</div>
+          <div class="cnt-lbl">Minutes</div>
+        </div>
+        <div class="cnt-colon">:</div>
+        <div class="cnt-block">
+          <div class="cnt-num" id="cntSecs">00</div>
+          <div class="cnt-lbl">Seconds</div>
+        </div>
+      </div>
+
+      <div class="gate-info-row">
+        <div class="gate-info-item">
+          <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/></svg>
+          Duration: 70 Minutes
+        </div>
+        <div class="gate-info-item">
+          <svg viewBox="0 0 20 20" fill="currentColor"><path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/><path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"/></svg>
+          60 Questions · 60 Marks
+        </div>
+        <div class="gate-info-item">
+          <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/></svg>
+          Negative Marking: −0.25
+        </div>
+      </div>
+
+      <p class="gate-note">This page refreshes automatically when the exam opens. Please keep this tab open.</p>
+
     </div>
-
-    <div class="reg-card">
-      <div class="reg-card-header">
-        <h1>Entrance Test — 2026</h1>
-        <p>Please enter your details to begin the examination</p>
-      </div>
-
-      <div class="reg-form">
-        <div class="form-group">
-          <label for="candidateName">Candidate Full Name</label>
-          <input type="text" id="candidateName" placeholder="Enter your full name" autocomplete="off"/>
-          <span class="field-hint">As per your admit card</span>
-        </div>
-        <div class="form-group">
-          <label for="rollNumber">Roll Number</label>
-          <input type="text" id="rollNumber" placeholder="e.g. KU2026001" autocomplete="off"/>
-          <span class="field-hint">Provided by the University</span>
-        </div>
-
-        <div class="exam-info-grid">
-          <div class="info-tile">
-            <span class="info-num">60</span>
-            <span class="info-lbl">Questions</span>
-          </div>
-          <div class="info-tile">
-            <span class="info-num">60</span>
-            <span class="info-lbl">Total Marks</span>
-          </div>
-          <div class="info-tile">
-            <span class="info-num">70</span>
-            <span class="info-lbl">Minutes</span>
-          </div>
-          <div class="info-tile warn">
-            <span class="info-num">−¼</span>
-            <span class="info-lbl">Wrong Ans</span>
-          </div>
-        </div>
-
-        <div class="instructions-box">
-          <h3>Instructions</h3>
-          <ul>
-            <li>Do not refresh or close the browser during the test.</li>
-            <li>Each question carries <strong>1 mark</strong>. Negative marking of <strong>0.25</strong> for each wrong answer.</li>
-            <li>The timer starts as soon as you click <em>Start Examination</em>.</li>
-            <li>The test will auto-submit when the timer reaches zero.</li>
-            <li>You may revisit and change answers before submission.</li>
-          </ul>
-        </div>
-
-        <button class="btn-start" onclick="startExam()">
-          <span>Start Examination</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </button>
-      </div>
-    </div>
-
-    <p class="reg-footer">Model Paper 2026 · Prepared as per Official KU Syllabus · By Kaiser Mohiuddin</p>
   </div>
 </div>
 
-<!-- ══════════════════════════════════════════
-     EXAM SCREEN
-══════════════════════════════════════════ -->
-<div id="exam-screen" class="screen">
+<!-- ═══════════════════════════════════════════════
+     SCREEN 0-B  ·  AFTER EXAM (window closed)
+═══════════════════════════════════════════════ -->
+<div id="after-screen" class="screen">
+  <div class="gate-bg">
+    <div class="gate-orb orb1 orb-red"></div>
+    <div class="gate-orb orb2 orb-red"></div>
+    <div class="gate-grid"></div>
+  </div>
 
-  <!-- HEADER -->
-  <header class="exam-header">
-    <div class="header-left">
-      <div class="header-emblem">KU</div>
-      <div class="header-info">
-        <span class="header-exam-name">BA LL.B Entrance Test 2026</span>
-        <span class="header-candidate" id="headerCandidate">—</span>
+  <div class="gate-wrap">
+    <div class="gate-card">
+
+      <div class="gate-logo">
+        <div class="gate-seal">KU</div>
+        <div class="gate-title">
+          <span class="gate-uni">CBT Model Test</span>
+          <span class="gate-prog">Model Test Paper for BA LL.B</span>
+        </div>
+      </div>
+
+      <div class="gate-divider"></div>
+
+      <div class="gate-status gate-status-after">
+        <div class="gate-status-icon gate-icon-closed">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <line x1="15" y1="9" x2="9" y2="15"/>
+            <line x1="9" y1="9" x2="15" y2="15"/>
+          </svg>
+        </div>
+        <h1 class="gate-heading">Examination Closed</h1>
+        <p class="gate-sub">The examination window has ended. The last date &amp; time to attempt was:</p>
+        <p class="gate-datetime gate-datetime-red" id="closedDateTime">—</p>
+      </div>
+
+      <div class="gate-closed-box">
+        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/></svg>
+        <p>If you believe this is an error, please contact the test administrator. Results will be announced as per the official schedule.</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SCREEN 1  ·  REGISTRATION
+═══════════════════════════════════════════════ -->
+<div id="reg-screen" class="screen">
+  <div class="reg-bg">
+    <div class="reg-orb reg-orb1"></div>
+    <div class="reg-orb reg-orb2"></div>
+    <div class="reg-grid"></div>
+  </div>
+
+  <div class="reg-wrap">
+
+    <!-- Masthead -->
+    <div class="reg-masthead">
+      <div class="reg-seal">KU</div>
+      <div class="reg-mtext">
+        <span class="reg-uni">CBT Model Test</span>
+        <span class="reg-prog">Model Test Paper for BA LL.B</span>
       </div>
     </div>
-    <div class="header-center">
-      <div class="timer-block" id="timerBlock">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+
+    <!-- Card -->
+    <div class="reg-card">
+
+      <!-- Banner -->
+      <div class="reg-banner">
+        <div class="reg-banner-left">
+          <div class="reg-banner-year">2026</div>
+          <div>
+            <h1 class="reg-banner-title">Model Test Paper</h1>
+            <p class="reg-banner-sub">Computer-Based Test · BA LL.B</p>
+          </div>
+        </div>
+        <div class="reg-banner-deco" aria-hidden="true">
+          <svg viewBox="0 0 100 100" fill="none">
+            <circle cx="50" cy="50" r="45" stroke="rgba(255,255,255,0.08)" stroke-width="1.5"/>
+            <circle cx="50" cy="50" r="30" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+            <circle cx="50" cy="50" r="15" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
+            <path d="M50 25v25l15 10" stroke="rgba(255,255,255,0.25)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="reg-body">
+
+        <!-- Exam stats -->
+        <div class="reg-stats">
+          <div class="rstat">
+            <div class="rstat-icon rstat-blue">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/><path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"/></svg>
+            </div>
+            <div class="rstat-val">60</div>
+            <div class="rstat-lbl">Questions</div>
+          </div>
+          <div class="rstat">
+            <div class="rstat-icon rstat-green">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            </div>
+            <div class="rstat-val">60</div>
+            <div class="rstat-lbl">Total Marks</div>
+          </div>
+          <div class="rstat">
+            <div class="rstat-icon rstat-amber">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/></svg>
+            </div>
+            <div class="rstat-val">70</div>
+            <div class="rstat-lbl">Minutes</div>
+          </div>
+          <div class="rstat">
+            <div class="rstat-icon rstat-red">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/></svg>
+            </div>
+            <div class="rstat-val">−¼</div>
+            <div class="rstat-lbl">Per Wrong</div>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div class="reg-form">
+          <div class="reg-form-row">
+            <div class="field-group">
+              <label class="field-label" for="candidateName">
+                <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 8a3 3 0 100-6 3 3 0 000 6zm2-3a2 2 0 11-4 0 2 2 0 014 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/></svg>
+                Candidate Full Name
+              </label>
+              <input class="field-input" type="text" id="candidateName"
+                     placeholder="As printed on your admit card"
+                     autocomplete="off" spellcheck="false"/>
+              <span class="field-hint">Enter name exactly as on your Admit Card</span>
+            </div>
+            <div class="field-group">
+              <label class="field-label" for="rollNumber">
+                <svg viewBox="0 0 16 16" fill="currentColor"><path d="M5 3a2 2 0 012-2h2a2 2 0 012 2v.05a.5.5 0 01-.5.5h-3a.5.5 0 01-.5-.5V3zM3 5a1 1 0 00-1 1v8a1 1 0 001 1h10a1 1 0 001-1V6a1 1 0 00-1-1H3zm1 3h8v1H4V8zm0 3h5v1H4v-1z"/></svg>
+                Roll Number
+              </label>
+              <input class="field-input" type="text" id="rollNumber"
+                     placeholder="e.g. KU2026001"
+                     autocomplete="off" spellcheck="false"/>
+              <span class="field-hint">As provided in your Hall Ticket</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Instructions -->
+        <div class="inst-panel">
+          <div class="inst-header">
+            <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/></svg>
+            Important Instructions — Read Carefully
+          </div>
+          <ol class="inst-list">
+            <li>Do <strong>not</strong> refresh, close, or navigate away from this tab during the test. Doing so may result in loss of answers.</li>
+            <li>Each correct answer carries <strong>+1 mark</strong>. Each wrong answer carries <strong>−0.25 marks</strong>. Unanswered questions carry no marks.</li>
+            <li>The countdown timer begins immediately upon clicking <strong>Start Examination</strong> and cannot be paused.</li>
+            <li>The test will <strong>auto-submit</strong> when the timer reaches zero, saving all answers marked up to that point.</li>
+            <li>You may freely navigate between questions and change your answers at any time before submission.</li>
+            <li>There are <strong>15 Sections</strong> of 4 questions each as per the official BA LL.B syllabus.</li>
+            <li>Ensure a stable internet connection before starting. Responses are saved to the server only on final submission.</li>
+          </ol>
+        </div>
+
+        <!-- Agreement -->
+        <div class="reg-agree">
+          <label class="agree-label">
+            <input type="checkbox" id="agreeCheck"/>
+            <span class="agree-box">
+              <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 6 5 9 10 3"/></svg>
+            </span>
+            <span class="agree-text">I have read and understood all instructions and I agree to abide by the examination rules and regulations.</span>
+          </label>
+        </div>
+
+        <button class="btn-start" id="btnStart" onclick="startExam()" disabled>
+          <span>Start Examination</span>
+          <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+        </button>
+
+      </div><!-- /.reg-body -->
+    </div><!-- /.reg-card -->
+
+    <div class="reg-footer">
+      <span>Model Paper 2026</span><span class="rdot">·</span>
+      <span>Official KU Syllabus &amp; Pattern</span><span class="rdot">·</span>
+      <span>Prepared by Kaiser Mohiuddin</span>
+    </div>
+
+  </div><!-- /.reg-wrap -->
+</div><!-- /#reg-screen -->
+
+<!-- ═══════════════════════════════════════════════
+     SCREEN 2  ·  EXAMINATION
+═══════════════════════════════════════════════ -->
+<div id="exam-screen" class="screen">
+
+  <!-- TOP BAR -->
+  <header class="topbar" role="banner">
+    <div class="tb-left">
+      <div class="tb-seal">KU</div>
+      <div class="tb-info">
+        <span class="tb-exam">CBT Model Test Paper — BA LL.B 2026</span>
+        <span class="tb-name" id="hdrName">—</span>
+      </div>
+    </div>
+
+    <div class="tb-center">
+      <div class="timer-pill" id="timerPill">
+        <svg class="t-icon" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+        </svg>
         <span id="timerDisplay">01:10:00</span>
       </div>
     </div>
-    <div class="header-right">
-      <span class="roll-badge" id="headerRoll">—</span>
-      <button class="btn-submit-header" onclick="confirmSubmit()">Submit Test</button>
+
+    <div class="tb-right">
+      <span class="tb-roll" id="hdrRoll">—</span>
+      <button class="tb-btn-submit" onclick="confirmSubmit()">
+        <svg viewBox="0 0 16 16" fill="currentColor"><path d="M10.97 4.97a.75.75 0 011.07 1.05l-3.99 4.99a.75.75 0 01-1.08.02L4.324 8.384a.75.75 0 111.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 01.02-.022z"/></svg>
+        Submit
+      </button>
+      <button class="tb-btn-palette" id="paletteToggleBtn" onclick="toggleMobileSidebar()" aria-label="Toggle question palette">
+        <svg viewBox="0 0 20 20" fill="currentColor"><path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM14 11a1 1 0 011 1v1h1a1 1 0 110 2h-1v1a1 1 0 11-2 0v-1h-1a1 1 0 110-2h1v-1a1 1 0 011-1z"/></svg>
+        <span>Palette</span>
+      </button>
     </div>
   </header>
 
-  <!-- BODY -->
-  <div class="exam-body">
+  <!-- LAYOUT -->
+  <div class="exam-layout">
 
-    <!-- MAIN QUESTION AREA -->
-    <main class="question-area">
-      <div class="q-meta">
-        <div class="q-section-tag" id="qSectionTag">Section I — History</div>
-        <div class="q-progress-text">
-          Question <span id="qCurrentNum">1</span> of <span id="qTotalNum">60</span>
+    <!-- QUESTION AREA -->
+    <main class="qarea" role="main">
+
+      <!-- Meta row -->
+      <div class="q-metarow">
+        <div class="q-secbadge" id="qSection">Section I — History</div>
+        <div class="q-counter">
+          Question <strong id="qNum">1</strong> of <strong id="qTotal">60</strong>
         </div>
       </div>
 
+      <!-- Progress bar -->
+      <div class="q-progress">
+        <div class="q-progress-bar" id="progressFill" style="width:1.67%"></div>
+      </div>
+
+      <!-- Question card -->
       <div class="q-card">
-        <div class="q-number-badge" id="qNumberBadge">01</div>
-        <div class="q-text" id="qText">Loading question...</div>
-
-        <div class="options-grid" id="optionsGrid">
-          <!-- Options injected by JS -->
-        </div>
+        <div class="q-num-tag" id="qBadge">01</div>
+        <div class="q-text" id="qText">Loading question…</div>
+        <div class="q-options" id="optionsList"></div>
       </div>
 
-      <div class="q-nav-bar">
-        <button class="btn-nav btn-clear" onclick="clearResponse()">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6M14 11v6"/></svg>
-          Clear
-        </button>
-        <div class="q-nav-center">
-          <button class="btn-nav btn-prev" onclick="goQuestion(-1)">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      <!-- Navigation -->
+      <div class="q-navrow">
+        <div class="qnav-left">
+          <button class="qnav-btn qnav-prev" onclick="goQuestion(-1)">
+            <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd"/></svg>
             Previous
           </button>
-          <button class="btn-nav btn-savenext" onclick="saveAndNext()">
-            Save &amp; Next
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          <button class="qnav-btn qnav-clear" onclick="clearResponse()">
+            <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"/></svg>
+            Clear
           </button>
         </div>
-        <button class="btn-nav btn-next-plain" onclick="goQuestion(1)">
-          Next
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </button>
-      </div>
-    </main>
-
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
-      <div class="sidebar-candidate">
-        <div class="candidate-avatar" id="sidebarAvatar">A</div>
-        <div class="candidate-details">
-          <span class="candidate-name-side" id="sidebarName">—</span>
-          <span class="candidate-roll-side" id="sidebarRoll">—</span>
+        <div class="qnav-right">
+          <button class="qnav-btn qnav-save" onclick="saveAndNext()">
+            Save &amp; Next
+            <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          </button>
         </div>
       </div>
 
-      <div class="sidebar-legend">
-        <div class="legend-item"><span class="legend-dot answered"></span>Answered</div>
-        <div class="legend-item"><span class="legend-dot unanswered"></span>Not Answered</div>
-        <div class="legend-item"><span class="legend-dot current"></span>Current</div>
-      </div>
+    </main><!-- /.qarea -->
 
-      <div class="sidebar-stats">
-        <div class="stat-box"><span class="stat-val" id="statAnswered">0</span><span class="stat-lbl">Answered</span></div>
-        <div class="stat-box"><span class="stat-val" id="statUnanswered">60</span><span class="stat-lbl">Not Answered</span></div>
-      </div>
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar" aria-label="Question palette">
+      <div class="sb-inner">
 
-      <div class="palette-header">Question Palette</div>
-      <div class="palette-grid" id="paletteGrid">
-        <!-- Buttons injected by JS -->
-      </div>
+        <!-- Mobile close -->
+        <button class="sb-close" onclick="toggleMobileSidebar()" aria-label="Close palette">
+          <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+        </button>
 
-      <button class="btn-submit-sidebar" onclick="confirmSubmit()">
-        Submit Test
-      </button>
-    </aside>
+        <!-- Candidate info -->
+        <div class="sb-cand">
+          <div class="sb-avatar" id="sbAvatar">A</div>
+          <div class="sb-cinfo">
+            <span class="sb-cname" id="sbName">—</span>
+            <span class="sb-croll" id="sbRoll">—</span>
+          </div>
+        </div>
 
-  </div>
-</div>
+        <!-- Stats -->
+        <div class="sb-stats">
+          <div class="sb-stat">
+            <div class="sb-stat-dot sb-dot-ans"></div>
+            <span class="sb-stat-num" id="statAns">0</span>
+            <span class="sb-stat-lbl">Answered</span>
+          </div>
+          <div class="sb-stat">
+            <div class="sb-stat-dot sb-dot-unans"></div>
+            <span class="sb-stat-num" id="statUnans">60</span>
+            <span class="sb-stat-lbl">Not Answered</span>
+          </div>
+          <div class="sb-stat">
+            <div class="sb-stat-dot sb-dot-curr"></div>
+            <span class="sb-stat-num" id="statCurr">1</span>
+            <span class="sb-stat-lbl">Current</span>
+          </div>
+        </div>
 
-<!-- ══════════════════════════════════════════
-     SUBMITTED SCREEN
-══════════════════════════════════════════ -->
+        <!-- Palette -->
+        <div class="sb-palette-title">Question Palette</div>
+        <div class="sb-sections" id="sbSections"></div>
+
+        <!-- Submit -->
+        <button class="sb-submit-btn" onclick="confirmSubmit()">
+          <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          Submit Test
+        </button>
+
+      </div><!-- /.sb-inner -->
+    </aside><!-- /.sidebar -->
+
+    <!-- Mobile backdrop -->
+    <div class="sb-backdrop" id="sidebarBackdrop" onclick="toggleMobileSidebar()"></div>
+
+  </div><!-- /.exam-layout -->
+</div><!-- /#exam-screen -->
+
+<!-- ═══════════════════════════════════════════════
+     SCREEN 3  ·  SUBMITTED
+═══════════════════════════════════════════════ -->
 <div id="submitted-screen" class="screen">
-  <div class="submitted-container">
-    <div class="submitted-icon">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+  <div class="sub-bg">
+    <div class="sub-orb sub-orb1"></div>
+    <div class="sub-orb sub-orb2"></div>
+  </div>
+  <div class="sub-card">
+    <div class="sub-check-ring">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+        <polyline points="22 4 12 14.01 9 11.01"/>
+      </svg>
     </div>
-    <h1>Test Submitted Successfully</h1>
-    <p>Your responses have been recorded. Please wait for official results from the University of Kashmir.</p>
-    <div class="submitted-meta">
-      <div class="submitted-row"><span>Candidate</span><strong id="submittedName">—</strong></div>
-      <div class="submitted-row"><span>Roll Number</span><strong id="submittedRoll">—</strong></div>
-      <div class="submitted-row"><span>Submitted At</span><strong id="submittedTime">—</strong></div>
-      <div class="submitted-row"><span>Questions Attempted</span><strong id="submittedAttempted">—</strong></div>
+    <h1 class="sub-heading">Test Submitted Successfully</h1>
+    <p class="sub-para">Your responses have been recorded. Please await official results from the administrator.</p>
+
+    <div class="sub-meta">
+      <div class="sub-row">
+        <span class="sub-key">Candidate Name</span>
+        <span class="sub-val" id="subName">—</span>
+      </div>
+      <div class="sub-row">
+        <span class="sub-key">Roll Number</span>
+        <span class="sub-val sub-mono" id="subRoll">—</span>
+      </div>
+      <div class="sub-row">
+        <span class="sub-key">Submitted At</span>
+        <span class="sub-val sub-mono" id="subTime">—</span>
+      </div>
+      <div class="sub-row">
+        <span class="sub-key">Questions Attempted</span>
+        <span class="sub-val" id="subAttempted">—</span>
+      </div>
     </div>
-    <p class="submitted-note">You may close this window. Results will be declared as per official schedule.</p>
+
+    <div class="sub-notice">
+      <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/></svg>
+      <p>Results and Answer Key will be released on <strong id="subReleaseDate">June 12, 2026 at 6:00 PM IST</strong>. You may close this browser tab.</p>
+    </div>
+
+    <div class="sub-results-banner">
+      <div class="sub-results-banner-text">
+        <svg viewBox="0 0 20 20" fill="currentColor"><path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/><path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"/></svg>
+        <div>
+          <strong>Answer Key &amp; Results Page</strong>
+          <span>Check your score, view all answers, and see section-wise performance</span>
+        </div>
+      </div>
+      <a class="sub-results-btn" href="results.html" target="_blank">
+        View Results
+        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+      </a>
+    </div>
+
   </div>
 </div>
 
-<!-- ══════════════════════════════════════════
+<!-- ═══════════════════════════════════════════════
      MODALS
-══════════════════════════════════════════ -->
-<div id="modal-overlay" class="modal-overlay" onclick="closeModal()">
-  <div class="modal-box" onclick="event.stopPropagation()">
-    <div class="modal-icon" id="modalIcon">⚠️</div>
-    <h2 id="modalTitle">Confirm Submission</h2>
-    <p id="modalMessage">Are you sure you want to submit the test?</p>
-    <div class="modal-actions" id="modalActions">
-      <button class="btn-modal-cancel" onclick="closeModal()">No, Go Back</button>
-      <button class="btn-modal-confirm" onclick="submitExam()">Yes, Submit</button>
+═══════════════════════════════════════════════ -->
+<!-- Submit confirm -->
+<div class="modal-bd" id="modalBackdrop" onclick="closeModal()">
+  <div class="modal-box" onclick="event.stopPropagation()" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-icon modal-icon-warn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"/></svg>
+    </div>
+    <h2 class="modal-title" id="modalTitle">Submit Test?</h2>
+    <p class="modal-msg" id="modalMsg">Are you sure you want to submit?</p>
+    <div class="modal-actions">
+      <button class="modal-btn modal-btn-cancel" onclick="closeModal()">Go Back</button>
+      <button class="modal-btn modal-btn-ok" onclick="submitExam()">Yes, Submit</button>
     </div>
   </div>
 </div>
 
-<div id="warning-overlay" class="modal-overlay">
-  <div class="modal-box warning-box">
-    <div class="modal-icon">⏳</div>
-    <h2 id="warningTitle">Time Warning</h2>
-    <p id="warningMessage">10 minutes remaining!</p>
-    <button class="btn-modal-confirm" onclick="closeWarning()">Continue Exam</button>
+<!-- Time warning -->
+<div class="modal-bd" id="warnBackdrop">
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="warnTitle">
+    <div class="modal-icon modal-icon-time">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+    </div>
+    <h2 class="modal-title" id="warnTitle">Time Warning</h2>
+    <p class="modal-msg" id="warnMsg">10 minutes remaining!</p>
+    <div class="modal-actions">
+      <button class="modal-btn modal-btn-ok" onclick="closeWarn()">Continue Exam</button>
+    </div>
   </div>
 </div>
 
