@@ -660,7 +660,7 @@ function finaliseSubmission() {
    GOOGLE SHEETS
    ════════════════════════════════════════════════════ */
 function pushToSheets(timeStr, attempted) {
-  if (!APPS_SCRIPT_URL || APPS_SCRIPT_URL === "YOUR_GOOGLE_APPS_SCRIPT_URL_HERE") {
+  if (!APPS_SCRIPT_URL || APPS_SCRIPT_URL === "https://script.google.com/macros/s/AKfycbxahS3i98dZyxbH_RwDAmJUbz8hkhbHbaX8H284hdonwbwX8-QLuY8LzTJnuZv3UkfC/exec") {
     console.warn("Apps Script URL not set. Responses not saved.");
     return;
   }
