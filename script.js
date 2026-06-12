@@ -7,7 +7,7 @@ const EXAM_CONFIG = {
   day:    12,   // Exam day; 
 
   // Start time in IST (24-hour format)
-  startHour:   9,  // 10 = 10:00 AM
+  startHour:   14,  // 14 = 2:00 PM
   startMinute: 0,   // 0 = on the hour
 
   windowMinutes: 90,   // 90-min window to log in & start
