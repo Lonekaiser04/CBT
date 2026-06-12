@@ -4,10 +4,10 @@ const EXAM_CONFIG = {
   // Date: YYYY, MM (0-based: Jan=0 … Dec=11), DD
   year:   2026,
   month:  5,       // 5 = June (0-based)
-  day:    10,   // Exam day; 
+  day:    12,   // Exam day; 
 
   // Start time in IST (24-hour format)
-  startHour:   10,  // 10 = 10:00 AM
+  startHour:   9,  // 10 = 10:00 AM
   startMinute: 0,   // 0 = on the hour
 
   windowMinutes: 90,   // 90-min window to log in & start
