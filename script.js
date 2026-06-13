@@ -4,16 +4,16 @@ const EXAM_CONFIG = {
   // Date: YYYY, MM (0-based: Jan=0 … Dec=11), DD
   year:   2026,
   month:  5,       // 5 = June (0-based)
-  day:    12,   // Exam day; 
+  day:    13,   // Exam day; 
 
   // Start time in IST (24-hour format)
-  startHour:   16,  // 14 = 2:00 PM
+  startHour:   9,  // 14 = 2:00 PM
   startMinute: 0,   // 0 = on the hour
 
   windowMinutes: 90,   // 90-min window to log in & start
 
   // Exam duration per candidate (minutes)
-  durationMinutes: 75,
+  durationMinutes: 15,
 
   // Timezone offset from UTC in minutes (IST = UTC+5:30 = 330)
   tzOffsetMinutes: 330,
@@ -660,7 +660,7 @@ function finaliseSubmission() {
    GOOGLE SHEETS
    ════════════════════════════════════════════════════ */
 function pushToSheets(timeStr, attempted) {
-  if (!APPS_SCRIPT_URL || APPS_SCRIPT_URL === "https://script.google.com/macros/s/AKfycbxahS3i98dZyxbH_RwDAmJUbz8hkhbHbaX8H284hdonwbwX8-QLuY8LzTJnuZv3UkfC/exec") {
+  if (!APPS_SCRIPT_URL || APPS_SCRIPT_URL === "") {
     console.warn("Apps Script URL not set. Responses not saved.");
     return;
   }
